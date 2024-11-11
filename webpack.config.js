@@ -1,8 +1,10 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
+const lodash = require('lodash');
+const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { title } = require('process');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -21,14 +23,18 @@ const config = {
     },
     devServer: {
         open: '/home.html',
-        host: 'localhost'
-        
+        host: 'localhost',
+        hot:true,
+        watchFiles: ['./src/**/*.html', './src/**/*.js', './src/**/*.css', './src/**/*.ts', './src/**/*.scss'],  // 监听HTML、JS、CSS文件变化
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/home.html',
             filename:"home.html",
-            chunks: ['home']
+            chunks: ['home'],
+            templateParameters:(compilation, assets, options) => {
+                
+            }
         }),
 
         new MiniCssExtractPlugin(),
