@@ -1,10 +1,17 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-const lodash = require('lodash');
-const fs = require('fs');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { title } = require('process');
+import lodash from 'lodash';
+import fs  from 'fs';
+import path  from 'path';
+import HtmlWebpackPlugin  from 'html-webpack-plugin';
+import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
+import { title } from 'process';
+import { fileURLToPath } from 'url';  // 用于将 url 转换为路径
+import { dirname } from 'path';  // 用于获取目录路径
+
+const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
+const __dirname = dirname(__filename);  // 获取当前文件的目录
+
+
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -32,8 +39,12 @@ const config = {
             template: './src/home.html',
             filename:"home.html",
             chunks: ['home'],
-            templateParameters:(compilation, assets, options) => {
-                
+            templateParameters:async (compilation, assets, options) => {
+                const {topHtml=top} = await import('./src/scripts/templates.js');
+                const topContent = lodash.template(topHtml)({}); // 渲染 header 内容
+                return {
+                    top:topContent
+                };
             }
         }),
 
@@ -61,6 +72,10 @@ const config = {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
+            {
+                test: /\.txt/,
+                type: 'asset/source',
+            }
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
@@ -71,7 +86,9 @@ const config = {
     },
 };
 
-module.exports = () => {
+
+
+export default () => {
     if (isProduction) {
         config.mode = 'production';
         
@@ -81,3 +98,4 @@ module.exports = () => {
     }
     return config;
 };
+// https://www.ychxmt.com/
