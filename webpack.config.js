@@ -20,12 +20,13 @@ const config = {
         filename:"[name].js"
     },
     devServer: {
-        open: true,
-        host: 'localhost',
+        open: '/home.html',
+        host: 'localhost'
+        
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'home.html',
             filename:"home.html",
             chunks: ['home']
         }),
