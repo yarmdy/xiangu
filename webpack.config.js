@@ -26,7 +26,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'home.html',
+            template: './src/home.html',
             filename:"home.html",
             chunks: ['home']
         }),
