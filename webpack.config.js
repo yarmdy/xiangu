@@ -13,7 +13,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 /** @type {import('webpack').Configuration} */
 const config = {
     entry: {
-        home:'./src/index.ts'
+        home:'./src/home.ts'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
