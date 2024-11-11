@@ -10,11 +10,14 @@ const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = MiniCssExtractPlugin.loader;
 
 
-
+/** @type {import('webpack').Configuration} */
 const config = {
-    entry: './src/index.ts',
+    entry: {
+        home:'./src/index.ts'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
+        filename:"[name].js"
     },
     devServer: {
         open: true,
@@ -23,6 +26,8 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
+            filename:"home.html",
+            chunks: ['home']
         }),
 
         new MiniCssExtractPlugin(),
