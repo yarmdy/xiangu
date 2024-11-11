@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "webpack": "^5.96.1"
+  },
+  "name": "xiangu",
+  "version": "1.0.0",
+  "description": "仙姑网站",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
