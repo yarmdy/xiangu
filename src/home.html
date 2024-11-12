@@ -5561,7 +5561,7 @@
             },
           });
 
-          Site.showOrHideMailBox();
+          //Site.showOrHideMailBox();
           Site.initNewWXLogin(
             '[{"fieldKey":"name","name":"姓名","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"email","name":"邮箱","placeholder":"","must":false,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"mobile","name":"手机","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false}]',
             true,
@@ -5580,13 +5580,13 @@
           );
 
           // ajax统计
-          Site.total({
-            colId: 2,
-            pdId: -1,
-            ndId: -1,
-            sc: 0,
-            statId: statId,
-          });
+          // Site.total({
+          //   colId: 2,
+          //   pdId: -1,
+          //   ndId: -1,
+          //   sc: 0,
+          //   statId: statId,
+          // });
           //保留旧用户的初始化版式区域4 和区域5 中，区域4的padding-right空间
           Site.colLayout45Width();
           //各个模块inc吐出脚本
@@ -12002,10 +12002,10 @@
           });
 
           //输出百度自动推送js
-          Site.printBaiduPushJs();
+          //Site.printBaiduPushJs();
 
-          Site.ajaxLogDog();
-          Site.sendBrowerInfo(false);
+          //Site.ajaxLogDog();
+          //Site.sendBrowerInfo(false);
 
           Site.initPage();
           setTimeout(afterModuleLoaded, 0);
@@ -12875,9 +12875,7 @@
 
         var fk_old_onload = window.onload;
         $(window).load(function () {
-          $.ajax({
-            url: "/ajax/setCookie_h.jsp?cmd=setWafCk_setCheckSiteLvBrowser",
-          });
+          
 
           Site.checkUserDomainAction();
 
