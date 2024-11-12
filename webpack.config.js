@@ -39,11 +39,10 @@ const config = {
             template: './src/home.html',
             filename:"home.html",
             chunks: ['home'],
-            templateParameters:async (compilation, assets, options) => {
-                const {topHtml=top} = await import('./src/scripts/templates.js');
-                const topContent = lodash.template(topHtml)({}); // 渲染 header 内容
+            templateParameters: (compilation, assets, options) => {
+                
                 return {
-                    top:topContent
+                    
                 };
             }
         }),
