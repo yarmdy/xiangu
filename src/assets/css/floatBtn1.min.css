@@ -38,7 +38,7 @@
 .form .floatBtnStyle102 .middle {
   border-radius: 10px;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle102 .middle {
   background: #5bc102;
@@ -50,7 +50,7 @@
 .form .floatBtnStyle104 .middle {
   border-radius: 10px;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle104 .middle {
   background: #2ca5f9;
@@ -62,7 +62,7 @@
 .form .floatBtnStyle106 .middle {
   border-radius: 10px;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle106 .middle {
   background: #282828;
@@ -79,32 +79,32 @@
 .form .floatBtnStyle201 .middle {
   background: #e7334d;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle202 .middle {
   background: #5bc102;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle203 .middle {
   background: #b0b0b0;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle204 .middle {
   background: #2ca5f9;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle205 .middle {
   background: #ffa800;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle206 .middle {
   background: #282828;
   color: #fff;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .fk-newAM-FloatBtnStyle201 .middle,
 .form .fk-newAM-FloatBtnStyle202 .middle,
@@ -135,7 +135,7 @@
 .form .floatBtnStyle302 .middle {
   -webkit-box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
   box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle302 .middle {
   background: -webkit-gradient(
@@ -171,7 +171,7 @@
 .form .floatBtnStyle304 .middle {
   -webkit-box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
   box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle304 .middle {
   background: -webkit-gradient(
@@ -207,7 +207,7 @@
 .form .floatBtnStyle306 .middle {
   -webkit-box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
   box-shadow: 3px 2px 12px rgba(66, 66, 66, 0.5);
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle306 .middle {
   background: -webkit-gradient(
@@ -251,7 +251,7 @@
 .form .floatBtnStyle402 .middle {
   color: #fff;
   text-shadow: 0 2px 1px #000;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle402 .middle {
   background: -webkit-gradient(
@@ -283,7 +283,7 @@
 .form .floatBtnStyle404 .middle {
   color: #fff;
   text-shadow: 0 2px 1px #000;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle404 .middle {
   background: -webkit-gradient(
@@ -315,7 +315,7 @@
 .form .floatBtnStyle406 .middle {
   color: #fff;
   text-shadow: 0 2px 1px #000;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .form .floatBtnStyle406 .middle {
   background: -webkit-gradient(

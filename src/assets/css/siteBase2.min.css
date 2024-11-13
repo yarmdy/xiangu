@@ -127,16 +127,16 @@ a {
   border: 1px solid #8f8f8f;
 }
 .g_close {
-  background: url(/image/bg01.png?v=202104251101) -1332px -36px no-repeat;
+  background: url(../img/bg01.png) -1332px -36px no-repeat;
 }
 .g_close:hover {
-  background: url(/image/bg01.png?v=202104251101) -1369px -36px no-repeat;
+  background: url(../img/bg01.png) -1369px -36px no-repeat;
 }
 .g_imgPrev {
-  background: url(/image/v2/vbg01.png?v=202303061117) -2075px -355px;
+  background: url(../img/v2/vbg01.png) -2075px -355px;
 }
 .g_imgNext {
-  background: url(/image/v2/vbg01.png?v=202303061117) -2118px -355px;
+  background: url(../img/v2/vbg01.png) -2118px -355px;
 }
 .g_clear {
   clear: both;
@@ -287,27 +287,27 @@ span.g_control_next:before {
   overflow: hidden;
 }
 .g_sB_rt {
-  background: url(/image/site/float/float_default.png?v=202104251101) no-repeat
+  background: url(../img/site/float/float_default.png) no-repeat
     0 0;
 }
 .g_sB_rc {
-  background: url(/image/site/float/float_default.png?v=202104251101) repeat-y -60px
+  background: url(../img/site/float/float_default.png) repeat-y -60px
     0;
 }
 .g_sB_rb {
-  background: url(/image/site/float/float_default.png?v=202104251101) no-repeat -120px
+  background: url(../img/site/float/float_default.png) no-repeat -120px
     0;
 }
 .g_sB_lt {
-  background: url(/image/site/float/float_default.png?v=202104251101) no-repeat -180px
+  background: url(../img/site/float/float_default.png) no-repeat -180px
     0;
 }
 .g_sB_lc {
-  background: url(/image/site/float/float_default.png?v=202104251101) repeat-y -240px
+  background: url(../img/site/float/float_default.png) repeat-y -240px
     0;
 }
 .g_sB_lb {
-  background: url(/image/site/float/float_default.png?v=202104251101) no-repeat -300px
+  background: url(../img/site/float/float_default.png) no-repeat -300px
     0;
 }
 @media screen and (max-device-width: 500px) {
@@ -370,23 +370,23 @@ span.g_control_next:before {
   margin: 22px 0 23px 15px;
 }
 .g_photoBack {
-  background: url(/image/site/photo_back.png?v=202104251101) 50% no-repeat;
+  background: url(../img/site/photo_back.png) 50% no-repeat;
   cursor: pointer;
 }
 .g_topFlag1 {
-  background: url(/image/g_topFlag1.gif?v=202104251101) no-repeat 0 -36px;
+  background: url(../img/g_topFlag1.gif) no-repeat 0 -36px;
 }
 .g_topFlag2 {
-  background: url(/image/g_topFlag2.gif?v=202104251101) no-repeat 0 -37px;
+  background: url(../img/g_topFlag2.gif) no-repeat 0 -37px;
 }
 .g_topFlag3 {
-  background: url(/image/g_topFlag3.gif?v=202104251101) no-repeat 0 -36px;
+  background: url(../img/g_topFlag3.gif) no-repeat 0 -36px;
 }
 .g_topFlag4 {
-  background: url(/image/g_topFlag4.gif?v=202104251101) no-repeat 0 4px;
+  background: url(../img/g_topFlag4.gif) no-repeat 0 4px;
 }
 .g_topFlag5 {
-  background: url(/image/g_topFlag5.gif?v=202104251101) no-repeat 0 2px;
+  background: url(../img/g_topFlag5.gif) no-repeat 0 2px;
 }
 .g_body,
 .g_html {
@@ -868,7 +868,7 @@ _:-ms-fullscreen {
   display: none;
 }
 .nav .itemPrev {
-  background: url(/image/template/frame/navleft.gif?v=202104251101) no-repeat;
+  background: url(../img/template/frame/navleft.gif) no-repeat;
   cursor: pointer;
   display: none;
   height: 31px;
@@ -882,7 +882,7 @@ _:-ms-fullscreen {
   z-index: 16;
 }
 .nav .itemPrevHover {
-  background: url(/image/template/frame/navleft2.gif?v=202104251101) no-repeat;
+  background: url(../img/template/frame/navleft2.gif) no-repeat;
 }
 .nav .itemContainer {
   height: auto;
@@ -897,7 +897,7 @@ _:-ms-fullscreen {
   position: absolute;
 }
 .nav .itemNext {
-  background: url(/image/template/frame/navright.gif?v=202104251101) no-repeat;
+  background: url(../img/template/frame/navright.gif) no-repeat;
   cursor: pointer;
   display: none;
   height: 31px;
@@ -909,7 +909,7 @@ _:-ms-fullscreen {
   z-index: 16;
 }
 .nav .itemNextHover {
-  background: url(/image/template/frame/navright2.gif?v=202104251101) no-repeat;
+  background: url(../img/template/frame/navright2.gif) no-repeat;
 }
 .nav .itemSep {
   display: inline;
@@ -2321,20 +2321,20 @@ _:-ms-fullscreen {
   width: 40px;
 }
 .footerItemAddPic {
-  background: transparent url(/image/footer/normalImg.png?v=202104251101)
+  background: transparent url(../img/footer/normalImg.png)
     no-repeat 0 0;
-  _background: transparent url(/image/footer/normalImg.gif?v=202104251101)
+  _background: transparent url(../img/footer/normalImg.gif)
     no-repeat 0 0;
   cursor: pointer;
 }
 .footerItemAddPic:hover {
-  background: transparent url(/image/footer/addImg.gif?v=202104251101) no-repeat
+  background: transparent url(../img/footer/addImg.gif) no-repeat
     0 0;
 }
 .footerItemPicEdit {
-  background: transparent url(/image/footer/rightCorner.png?v=202104251101)
+  background: transparent url(../img/footer/rightCorner.png)
     no-repeat 18px -10px;
-  _background: transparent url(/image/footer/rightCorner.gif?v=202104251101)
+  _background: transparent url(../img/footer/rightCorner.gif)
     no-repeat 18px -10px;
   cursor: pointer;
   height: 40px;
@@ -2351,7 +2351,7 @@ _:-ms-fullscreen {
 .footerItemPicCover-n,
 .footerItemPicCover-s,
 .footerItemPicCover-w {
-  background: transparent url(/image/footer/imgBorder.gif?v=202104251101)
+  background: transparent url(../img/footer/imgBorder.gif)
     no-repeat 0 0;
   position: absolute;
 }
@@ -2440,7 +2440,7 @@ _:-ms-fullscreen {
   display: block;
 }
 .footerPattern3 .footerItemBottomList li {
-  background: transparent url(/image/footer/graySquare.jpg?v=202104251101)
+  background: transparent url(../img/footer/graySquare.jpg)
     no-repeat 0;
   overflow: hidden;
   padding-left: 8px;
@@ -2552,11 +2552,11 @@ div.levelStyle .footerItemBottomList li {
   border-radius: 7px;
   height: 14px;
   width: 14px;
-  behavior: url(res/js/pie/PIE.min.htc?v=201509071511);
+  behavior: url(../pie/pie.min.htc);
   margin-right: 12px;
 }
 .fmSlideStyleArrowBase {
-  background: url(/image/v2/vbg01.png?v=201907171253) no-repeat;
+  background: url(../img/v2/vbg01.png) no-repeat;
   z-index: 10;
 }
 .fmSlideStyleArrowBase,
@@ -2608,12 +2608,12 @@ div.levelStyle .footerItemBottomList li {
   z-index: 3;
 }
 .fk_fullmeasure_three_pic_carousel_arrow__prev {
-  background: url(/image/site/left.gif?v=202104251101) no-repeat\9;
+  background: url(../img/site/left.gif) no-repeat\9;
   left: 40px;
   margin-left: 1%;
 }
 .fk_fullmeasure_three_pic_carousel_arrow__next {
-  background: url(/image/site/right.gif?v=202104251101) no-repeat\9;
+  background: url(../img/site/right.gif) no-repeat\9;
   margin-right: 1%;
   right: 40px;
 }
@@ -2635,11 +2635,11 @@ div.levelStyle .footerItemBottomList li {
   width: 20px;
 }
 .f_fullmeasure_three_pic_carousel_arrow_icon__prev {
-  background: url(/image/v2/vbg01.png?v=202303061117) no-repeat -2157px -358px;
+  background: url(../img/v2/vbg01.png) no-repeat -2157px -358px;
   background: none\9;
 }
 .f_fullmeasure_three_pic_carousel_arrow_icon__next {
-  background: url(/image/v2/vbg01.png?v=202303061117) no-repeat -2200px -358px;
+  background: url(../img/v2/vbg01.png) no-repeat -2200px -358px;
   background: none\9;
 }
 .fk_fullmeasure_three_pic_carousel_mask {
@@ -2696,7 +2696,7 @@ div.levelStyle .footerItemBottomList li {
   z-index: 9999;
 }
 .fk-subNavPack .editSubNavPack .icon {
-  background: url(/image/v2/mbg01.png?v=202407221109) -51px -181px no-repeat;
+  background: url(../img/v2/mbg01.png) -51px -181px no-repeat;
   float: left;
   height: 25px;
   margin-left: 5px;
@@ -2823,7 +2823,7 @@ div.extBanner {
   right: 0;
 }
 .mp-closeBtn {
-  background: url(/image/mobiPlatform/close.gif?v=202104251101) no-repeat 0 0;
+  background: url(../img/mobiPlatform/close.gif) no-repeat 0 0;
   display: block;
   height: 17px;
   position: absolute;
@@ -2832,7 +2832,7 @@ div.extBanner {
   width: 32px;
 }
 .mp-closeBtn:hover {
-  background: url(/image/mobiPlatform/close.gif?v=202104251101) no-repeat 0 -30px;
+  background: url(../img/mobiPlatform/close.gif) no-repeat 0 -30px;
 }
 .mobiPlatformIcon {
   height: 60px;
@@ -2844,17 +2844,17 @@ div.extBanner {
   z-index: 9031;
 }
 .mobiPlatformIcon_left {
-  background: url(/image/mobiPlatform/phoneTip_left.png?v=202104251101)
+  background: url(../img/mobiPlatform/phoneTip_left.png)
     no-repeat 0 0;
-  *background: url(/image/mobiPlatform/phoneTip2_left.png?v=202104251101)
+  *background: url(../img/mobiPlatform/phoneTip2_left.png)
     no-repeat 0 0;
   left: 0;
   top: 50%;
 }
 .mobiPlatformIcon_right {
-  background: url(/image/mobiPlatform/phoneTip_right.png?v=202104251101)
+  background: url(../img/mobiPlatform/phoneTip_right.png)
     no-repeat 0 0;
-  *background: url(/image/mobiPlatform/phoneTip2_right.png?v=202104251101)
+  *background: url(../img/mobiPlatform/phoneTip2_right.png)
     no-repeat 0 0;
   right: 0;
   top: 50%;
@@ -2884,17 +2884,17 @@ div.extBanner {
   z-index: 2;
 }
 .mobiPlatform_big {
-  background: url(/image/mobiPlatform/big_phone2.png?v=202104251101) no-repeat 0
+  background: url(../img/mobiPlatform/big_phone2.png) no-repeat 0
     0;
-  _background: url(/image/mobiPlatform/big_phone.gif?v=202104251101) no-repeat 0
+  _background: url(../img/mobiPlatform/big_phone.gif) no-repeat 0
     0;
   height: 592px;
   width: 300px;
 }
 .mobiPlatform_small {
-  background: url(/image/mobiPlatform/small_phone2.png?v=202104251101) no-repeat
+  background: url(../img/mobiPlatform/small_phone2.png) no-repeat
     0 0;
-  _background: url(/image/mobiPlatform/small_phone.gif?v=202104251101) no-repeat
+  _background: url(../img/mobiPlatform/small_phone.gif) no-repeat
     0 0;
   height: 483px;
   width: 300px;
@@ -2914,7 +2914,7 @@ div.extBanner {
   width: 265px;
 }
 .mp-innerIframe2 {
-  background: url(/image/mobiPlatform/updateTip.jpg?v=202104251101) no-repeat
+  background: url(../img/mobiPlatform/updateTip.jpg) no-repeat
     50%;
   position: relative;
 }
@@ -2931,7 +2931,7 @@ div.extBanner {
   bottom: 30px;
 }
 .mp-updateBtn {
-  background: url(/image/mobiPlatform/updateBtn.jpg?v=202104251101) no-repeat 0
+  background: url(../img/mobiPlatform/updateBtn.jpg) no-repeat 0
     0;
   display: block;
   height: 33px;
@@ -2947,7 +2947,7 @@ div.extBanner {
   width: 100%;
 }
 .mp-loading-icon {
-  background: url(/image/loading/loading.png?v=202104251101) no-repeat 0 0;
+  background: url(../img/loading/loading.png) no-repeat 0 0;
   background-size: 40px 40px;
   border-radius: 5px;
   height: 40px;
@@ -2962,9 +2962,9 @@ div.extBanner {
   top: 50%;
 }
 .mobiPlatform_big_new {
-  background: url(/image/mobiPlatform/Mobile-4.0.png?v=202104251101) no-repeat 0
+  background: url(../img/mobiPlatform/Mobile-4.0.png) no-repeat 0
     2px;
-  _background: url(/image/mobiPlatform/Mobile-4.0.gif?v=202104251101) no-repeat
+  _background: url(../img/mobiPlatform/Mobile-4.0.gif) no-repeat
     0 2px;
   border-radius: 30px;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -2980,9 +2980,9 @@ div.extBanner {
   width: 328px;
 }
 .mobiPlatform_small_new {
-  background: url(/image/mobiPlatform/Mobile-4.0-small.png?v=202104251101)
+  background: url(../img/mobiPlatform/Mobile-4.0-small.png)
     no-repeat 0 2px;
-  _background: url(/image/mobiPlatform/Mobile-4.0-small.gif?v=202104251101)
+  _background: url(../img/mobiPlatform/Mobile-4.0-small.gif)
     no-repeat 0 2px;
   border-radius: 30px;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -3005,7 +3005,7 @@ div.extBanner {
   transform: rotate(1turn);
 }
 .mobiPlatform .mp-hoverTip {
-  background: url(/image/mobiPlatform/hoverTips.png?v=202104251101) no-repeat 0
+  background: url(../img/mobiPlatform/hoverTips.png) no-repeat 0
     0;
   filter: alpha(opacity=0);
   height: 30px;
@@ -3032,7 +3032,7 @@ div.extBanner {
   z-index: 9035;
 }
 .loading-gif-container {
-  background: url(/image/loading/loading_copyWeb.gif?v=202104251101) no-repeat 0
+  background: url(../img/loading/loading_copyWeb.gif) no-repeat 0
     0;
   height: 180px;
   margin: 0 auto;
@@ -3073,7 +3073,7 @@ div.extBanner {
   -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .site_jz_button__active {
   background-color: #5874d8;
@@ -3094,7 +3094,7 @@ div.extBanner {
   padding: 0;
   position: relative;
   width: 80px;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .site_popover_header_inner .site_popover_header_span1 {
   background-color: #f8bb86;
@@ -3105,7 +3105,7 @@ div.extBanner {
   position: absolute;
   top: 10px;
   width: 5px;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .site_popover_header_inner .site_popover_header_span2 {
   background-color: #f8bb86;
@@ -3116,7 +3116,7 @@ div.extBanner {
   margin-left: -3px;
   position: absolute;
   width: 7px;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
 }
 .site_popover_operate_wrap {
   bottom: 0;
@@ -3135,7 +3135,7 @@ div.extBanner {
   line-height: 26px;
 }
 .formBox.ie_tips_popup {
-  background: url(/image/v2/iePoupup.png?v=202009231402);
+  background: url(../img/v2/iePoupup.png);
   left: "50%";
   margin-left: "-200px";
   margin-top: "-140px";
@@ -3173,7 +3173,7 @@ div.extBanner {
   user-select: none;
   white-space: nowrap;
   width: 184px;
-  behavior: url(res/js/pie/PIE.min.htc?v=201507141146);
+  behavior: url(../pie/pie.min.htc);
   background-color: transparent;
 }
 .site_ie_popup_btn:hover {
@@ -3399,7 +3399,7 @@ div.extBanner {
   z-index: 9999;
 }
 .fix-wrap-20201019 .popup-mask .popup {
-  background: url(/image/v2/lottery/luckdrawbg.png) no-repeat;
+  background: url(../img/v2/lottery/luckdrawbg.png) no-repeat;
   background-size: 100%;
   height: 658px;
   margin: 0 auto;
@@ -3442,7 +3442,7 @@ div.extBanner {
   animation-timing-function: ease;
 }
 .fix-wrap-20201019 .popup-mask .popup .lottery-list .item-default {
-  background: url(/image/v2/lottery/prizebg.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/prizebg.png) no-repeat;
   background-size: 100%;
 }
 .fix-wrap-20201019 .popup-mask .popup .lottery-list .item-active {
@@ -3510,12 +3510,12 @@ div.extBanner {
   width: 120px;
 }
 .fix-wrap-20201019 .popup-mask .popup .lottery-list .lottery-item.center1 {
-  background: url(/image/v2/lottery/drawbtn.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/drawbtn.png) no-repeat;
   background-size: 100%;
   cursor: pointer;
 }
 .fix-wrap-20201019 .popup-mask .popup .lottery-list .lottery-item.center2 {
-  background: url(/image/v2/lottery/drawbtns.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/drawbtns.png) no-repeat;
   background-size: 100%;
 }
 .fix-wrap-20201019 .popup-mask .popup .close {
@@ -3573,7 +3573,7 @@ div.extBanner {
   .result-popup
   .result-type-custom-1
   .content {
-  background: url(/image/v2/lottery/bg1.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/bg1.png) no-repeat;
   background-size: 100%;
   height: 314px;
   margin: 0 auto;
@@ -3745,7 +3745,7 @@ div.extBanner {
   .result-type-custom-2
   .content
   .top-title-img {
-  background: url(/image/v2/lottery/wintitle.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/wintitle.png) no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -3915,7 +3915,7 @@ div.extBanner {
   .result-type-2
   .content
   .top-title-img {
-  background: url(/image/v2/lottery/wintitle.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/wintitle.png) no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -4037,7 +4037,7 @@ div.extBanner {
   .result-type-3
   .content
   .top-title-img {
-  background: url(/image/v2/lottery/wintitle.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/wintitle.png) no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -4139,7 +4139,7 @@ div.extBanner {
   .result-type-4
   .content
   .top-title-img {
-  background: url(/image/v2/lottery/nowintitle.png?v=202104251101) no-repeat;
+  background: url(../img/v2/lottery/nowintitle.png) no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -4224,7 +4224,7 @@ div.extBanner {
   width: 240px;
 }
 .form-lottery-20201021-style-1 {
-  background: url(/image/v2/lottery/Fill_in_the_award_Smalls.png?v=202104251101)
+  background: url(../img/v2/lottery/Fill_in_the_award_Smalls.png)
     no-repeat;
   border-radius: 2px;
   height: 20px;
@@ -4233,7 +4233,7 @@ div.extBanner {
   width: 56px;
 }
 .form-lottery-20201021-style-2 {
-  background: url(/image/v2/lottery/Fill_in_the_awards.png?v=202104251101)
+  background: url(../img/v2/lottery/Fill_in_the_awards.png)
     no-repeat;
   background-size: 100%;
   height: 28px;
@@ -4243,7 +4243,7 @@ div.extBanner {
 }
 @media only screen and (max-width: 1280px) {
   .fix-wrap-20201019 .popup-mask .popup {
-    background: url(/image/v2/lottery/luckdrawbg.png?v=202104251101) no-repeat;
+    background: url(../img/v2/lottery/luckdrawbg.png) no-repeat;
     background-size: 100%;
     height: 658px;
     margin: 0 auto;
@@ -4482,7 +4482,7 @@ div.extBanner {
   align-items: center;
 }
 .flash_tips_icon {
-  background-image: url(/image/v2/flashTips.png?v=202104251101);
+  background-image: url(../img/v2/flashTips.png);
   height: 42px;
   margin-bottom: 18px;
   min-height: 42px;
@@ -4550,7 +4550,7 @@ div.extBanner {
   text-align: center;
 }
 .newsDetailV2 .newsDetail_hide--img {
-  background: url(/image/v2/lookTipImg.png?v=202104251101);
+  background: url(../img/v2/lookTipImg.png);
   height: 216px;
   margin: 0 auto 50px;
   width: 392px;

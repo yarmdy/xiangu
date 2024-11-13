@@ -48,13 +48,13 @@
   width: 22px;
 }
 .qqImg {
-  background: url(/image/site/lg_qq.gif?v=202104251101) no-repeat;
+  background: url(../img/site/lg_qq.gif) no-repeat;
 }
 .wbImg {
-  background: url(/image/site/lg_sn.png?v=202104251101) no-repeat;
+  background: url(../img/site/lg_sn.png) no-repeat;
 }
 .wxImg {
-  background: url(/image/site/lg_wx.png?v=202104251101) no-repeat;
+  background: url(../img/site/lg_wx.png) no-repeat;
 }
 .memberLogin {
   border-spacing: 0;
@@ -153,10 +153,10 @@
   width: 86%;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .memberAcctInput {
-  background: url(/image/member/icon_user.jpg?v=202104251101) 0 no-repeat;
+  background: url(../img/member/icon_user.jpg) 0 no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .memberPwdInput {
-  background: url(/image/member/icon_pwd.jpg?v=202104251101) 0 no-repeat;
+  background: url(../img/member/icon_pwd.jpg) 0 no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .memberCaptchaInput {
   background-color: #f7f7f7;
@@ -249,15 +249,15 @@
   width: 4%;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton1 .left {
-  background: url(/image/member/buttonStyle/red_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/red_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton1 .middle {
-  background: url(/image/member/buttonStyle/red_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/red_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton1 .right {
-  background: url(/image/member/buttonStyle/red_right.png?v=202104251101) 100%
+  background: url(../img/member/buttonStyle/red_right.png) 100%
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton2 .left,
@@ -266,15 +266,15 @@
   background-color: #f54f4f;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton3 .left {
-  background: url(/image/member/buttonStyle/yellow_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/yellow_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton3 .middle {
-  background: url(/image/member/buttonStyle/yellow_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/yellow_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton3 .right {
-  background: url(/image/member/buttonStyle/yellow_right.png?v=202104251101)
+  background: url(../img/member/buttonStyle/yellow_right.png)
     100% no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton4 .left,
@@ -283,15 +283,15 @@
   background-color: #ffad2b;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton5 .left {
-  background: url(/image/member/buttonStyle/blue_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/blue_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton5 .middle {
-  background: url(/image/member/buttonStyle/blue_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/blue_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton5 .right {
-  background: url(/image/member/buttonStyle/blue_right.png?v=202104251101) 100%
+  background: url(../img/member/buttonStyle/blue_right.png) 100%
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton6 .left,
@@ -300,15 +300,15 @@
   background-color: #5ab4ff;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton7 .left {
-  background: url(/image/member/buttonStyle/green_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/green_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton7 .middle {
-  background: url(/image/member/buttonStyle/green_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/green_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton7 .right {
-  background: url(/image/member/buttonStyle/green_right.png?v=202104251101) 100%
+  background: url(../img/member/buttonStyle/green_right.png) 100%
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton8 .left,
@@ -317,15 +317,15 @@
   background-color: #85c300;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton9 .left {
-  background: url(/image/member/buttonStyle/pink_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/pink_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton9 .middle {
-  background: url(/image/member/buttonStyle/pink_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/pink_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton9 .right {
-  background: url(/image/member/buttonStyle/pink_right.png?v=202104251101) 100%
+  background: url(../img/member/buttonStyle/pink_right.png) 100%
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton10 .left,
@@ -334,15 +334,15 @@
   background-color: #e13e8d;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton11 .left {
-  background: url(/image/member/buttonStyle/black_left.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/black_left.png) 0
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton11 .middle {
-  background: url(/image/member/buttonStyle/black_middle.png?v=202104251101) 0
+  background: url(../img/member/buttonStyle/black_middle.png) 0
     repeat-x;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton11 .right {
-  background: url(/image/member/buttonStyle/black_right.png?v=202104251101) 100%
+  background: url(../img/member/buttonStyle/black_right.png) 100%
     no-repeat;
 }
 .memberLoginPanel .memberLoginItemList .memberLoginItem .loginButton12 .left,
@@ -406,16 +406,13 @@
   -khtml-opacity: 1;
 }
 .memberLoginPanel .thirdPartyLogin .qq {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) 0 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) 0 no-repeat;
+  background: url(../img/site/n_shareIcn.gif) 0 0 no-repeat;
 }
 .memberLoginPanel .thirdPartyLogin .sina {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) -56px 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) -56px 0 no-repeat;
+  background: url(../img/site/n_shareIcn.gif) -56px 0 no-repeat;
 }
 .memberLoginPanel .thirdPartyLogin .wx {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) -29px 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) -29px 0 no-repeat;
+  background: url(../img/site/n_shareIcn.gif) -29px 0 no-repeat;
 }
 .memberLoginPanel .signup a.regAcct {
   font-size: 12px;

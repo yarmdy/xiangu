@@ -155,10 +155,10 @@
   width: 96%;
 }
 .fk-rbar-outer .rbar-loginItem .memberAcctInput {
-  background: url(/image/member/icon_user.jpg?v=202104251101) 0 no-repeat;
+  background: url(../img/member/icon_user.jpg) 0 no-repeat;
 }
 .fk-rbar-outer .rbar-loginItem .memberPwdInput {
-  background: url(/image/member/icon_pwd.jpg?v=202104251101) 0 no-repeat;
+  background: url(../img/member/icon_pwd.jpg) 0 no-repeat;
 }
 .fk-rbar-outer .rbar-loginItem .memberCaptchaInput {
   background-color: #f7f7f7;
@@ -299,16 +299,16 @@
   -khtml-opacity: 1;
 }
 .fk-rbar-outer .thirdPartyLogin .qq {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) 0 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) 0 no-repeat;
+  background: url(../img/site/n_shareIcn.png) 0 0 no-repeat;
+  _background: url(../img/site/n_shareIcn.gif) 0 no-repeat;
 }
 .fk-rbar-outer .thirdPartyLogin .sina {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) -56px 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) -56px 0 no-repeat;
+  background: url(../img/site/n_shareIcn.png) -56px 0 no-repeat;
+  _background: url(../img/site/n_shareIcn.gif) -56px 0 no-repeat;
 }
 .fk-rbar-outer .thirdPartyLogin .wx {
-  background: url(/image/site/n_shareIcn.png?v=202303061117) -29px 0 no-repeat;
-  _background: url(/image/site/n_shareIcn.gif?v=202104251101) -29px 0 no-repeat;
+  background: url(../img/site/n_shareIcn.png) -29px 0 no-repeat;
+  _background: url(../img/site/n_shareIcn.gif) -29px 0 no-repeat;
 }
 .fk-rbar-outer .fk-login-triangle {
   color: #fff;
@@ -321,8 +321,8 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-profileItem-logo1-hover {
-  background: url(/image/rightSideBar/profile_6_h.png?v=202104251101) no-repeat;
-  _background: url(/image/rightSideBar/profile_6_h.png?v=202104251101) no-repeat;
+  background: url(../img/rightSideBar/profile_6_h.png) no-repeat;
+  _background: url(../img/rightSideBar/profile_6_h.png) no-repeat;
   height: 20px;
   left: 9px;
   position: absolute;
@@ -371,7 +371,7 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-collectItem-logo-hover {
-  _background: url(/image/rightSideBar/collect_6_h.png?v=202104251101) no-repeat;
+  _background: url(../img/rightSideBar/collect_6_h.png) no-repeat;
   height: 20px;
   left: 9px;
   position: absolute;
@@ -388,7 +388,7 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-cartItem-logo-hover {
-  _background: url(/image/rightSideBar/mallCart_6_h.png?v=202104251101)
+  _background: url(../img/rightSideBar/mallCart_6_h.png)
     no-repeat;
   height: 20px;
   left: 9px;
@@ -438,7 +438,7 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-feedBackItem-logo-hover {
-  _background: url(/image/rightSideBar/feedBack_6_h.png?v=202104251101)
+  _background: url(../img/rightSideBar/feedBack_6_h.png)
     no-repeat;
   height: 20px;
   left: 9px;
@@ -454,7 +454,7 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-mobiItem-logo-hover {
-  _background: url(/image/rightSideBar/qrCode_6_h.png?v=202104251101) no-repeat;
+  _background: url(../img/rightSideBar/qrCode_6_h.png) no-repeat;
   height: 20px;
   left: 9px;
   position: absolute;
@@ -471,7 +471,7 @@
   position: absolute;
 }
 .fk-rbar-outer .fk-rbar-backTop-logo-hover {
-  _background: url(/image/rightSideBar/TOP_6_h.png?v=202104251101) no-repeat;
+  _background: url(../img/rightSideBar/TOP_6_h.png) no-repeat;
   height: 25px;
   left: 6px;
   position: absolute;
@@ -546,7 +546,7 @@
   text-align: center;
 }
 .fk-rbar-outer .fk-rbar-plugBack {
-  background: url(/image/rightSideBar/jt4.png?v=202104251101) no-repeat;
+  background: url(../img/rightSideBar/jt4.png) no-repeat;
   background: url(../img/jt4_6.png) no-repeat;
   cursor: pointer;
   height: 9px;
@@ -632,15 +632,15 @@
   width: 11px;
 }
 .fk-rbar-outer .fk-rbar-moreIcon {
-  background: url(/image/rightSideBar/jt3.png?v=202104251101) no-repeat;
-  _background: url(/image/rightSideBar/jt3_6.png?v=202104251101) no-repeat;
+  background: url(../img/rightSideBar/jt3.png) no-repeat;
+  _background: url(../img/rightSideBar/jt3_6.png) no-repeat;
   cursor: pointer;
   height: 6px;
   width: 11px;
 }
 .fk-rbar-outer .fk-rbar-lessIcon {
-  background: url(/image/rightSideBar/jt3_1.png?v=202104251101) no-repeat;
-  _background: url(/image/rightSideBar/jt3_1_6.png?v=202104251101) no-repeat;
+  background: url(../img/rightSideBar/jt3_1.png) no-repeat;
+  _background: url(../img/rightSideBar/jt3_1_6.png) no-repeat;
   cursor: pointer;
   height: 6px;
   width: 11px;
@@ -679,8 +679,8 @@
   text-align: center;
 }
 .fk-rbar-outer .fk-rbar-noProductIcon {
-  background: url(/image/v2/defaultIcon.png?v=202104251101) no-repeat;
-  _background: url(/image/v2/defaultIcon_6.png?v=202104251101) no-repeat;
+  background: url(../img/v2/defaultIcon.png) no-repeat;
+  _background: url(../img/v2/defaultIcon_6.png) no-repeat;
   background-position: 0 -1375px;
   _background-position: 0 -415px;
   height: 170px;
@@ -909,8 +909,8 @@
   margin-left: 5px;
 }
 .fk-rbar-outer .fk-rbar-noCollectIcon {
-  background: url(/image/v2/defaultIcon.png?v=202104251101) no-repeat;
-  _background: url(/image/v2/defaultIcon_6.png?v=202104251101) no-repeat;
+  background: url(../img/v2/defaultIcon.png) no-repeat;
+  _background: url(../img/v2/defaultIcon_6.png) no-repeat;
   background-position: 0 -1150px;
   _background-position: 0 -190px;
   height: 230px;
@@ -969,17 +969,17 @@
   text-decoration: none;
 }
 .fk-rbar-onlineSerList .qqImg0 {
-  background: url(/image/bg04.png?v=202104251101) -520px -220px no-repeat;
+  background: url(../img/bg04.png) -520px -220px no-repeat;
 }
 .fk-rbar-onlineSerList .skypeImg {
-  background: url(/image/comm/ueditor/images/skype2.png?v=202104251101)
+  background: url(../img/comm/ueditor/images/skype2.png)
     no-repeat;
 }
 .fk-rbar-onlineSerList .aliImg {
-  background: url(/image/wangwang/wawa.gif?v=202104251101) 50% no-repeat;
+  background: url(../img/wangwang/wawa.gif) 50% no-repeat;
 }
 .fk-rbar-onlineSerList .weixinImg {
-  background: url(/image/v2/vbg01.png?v=202303061117) no-repeat -524px -2272px;
+  background: url(../img/v2/vbg01.png) no-repeat -524px -2272px;
 }
 .serList-text {
   font-size: 14px;

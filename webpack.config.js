@@ -1,16 +1,18 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 import lodash from 'lodash';
 import fs  from 'fs';
-import path  from 'path';
+import path,{join,dirname}  from 'path';
 import HtmlWebpackPlugin  from 'html-webpack-plugin';
 import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
 import { title } from 'process';
 import { fileURLToPath } from 'url';  // 用于将 url 转换为路径
-import { dirname } from 'path';  // 用于获取目录路径
+import {PurgeCSSPlugin} from 'purgecss-webpack-plugin';
+
+import {glob} from 'glob'
 
 const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
 const __dirname = dirname(__filename);  // 获取当前文件的目录
-
+const paths = {src:join(__dirname,"src")}
 
 
 const isProduction = process.env.NODE_ENV == 'production';
@@ -21,60 +23,135 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 /** @type {import('webpack').Configuration} */
 const config = {
+    stats: {
+        errorDetails: true,
+    },
     entry: {
-        home:'./src/home.ts'
+        // home:'./src/home.ts'
+        index:['./src/index.ts']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename:"[name].js"
+        filename:"[name].js",
+        clean:true
     },
     devServer: {
         open: '/home.html',
-        host: 'localhost',
-        hot:true,
-        watchFiles: ['./src/**/*.html', './src/**/*.js', './src/**/*.css', './src/**/*.ts', './src/**/*.scss'],  // 监听HTML、JS、CSS文件变化
+        host: 'localhost'
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/home.html',
-            filename:"home.html",
-            chunks: ['home'],
-            templateParameters: (compilation, assets, options) => {
-                
-                return {
-                    
-                };
-            }
+        // new HtmlWebpackPlugin({
+        //     template: './src/home.html',
+        //     filename:"home.html",
+        //     chunks: ['home']
+        // }),
+
+        // new HtmlWebpackPlugin({
+        //     template: './src/index.html',
+        //     filename:"index.html",
+        //     chunks: ['index']
+        // }),
+
+        new MiniCssExtractPlugin({
+            filename:"[name].css"
         }),
 
-        new MiniCssExtractPlugin(),
+        new PurgeCSSPlugin({
+            paths:glob.sync(`${paths.src}/**/*`,{nodir:true})
+        })
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
     module: {
         rules: [
-            {
-                test: /\.(ts|tsx)$/i,
-                loader: 'ts-loader',
-                exclude: ['/node_modules/'],
-            },
-            {
-                test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
-            },
+            // {
+            //     test: /\.(ts|tsx)$/i,
+            //     loader: 'ts-loader',
+            //     exclude: ['/node_modules/'],
+            // },
+            // {
+            //     test: /\.css$/i,
+            //     use: [stylesHandler,'css-loader'],
+            //     generator :{
+            //         filename:"[name]_1[ext]"
+            //     }
+            // },
             {
                 test: /\.s[ac]ss$/i,
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
+                generator :{
+                    filename:"[name]_1[ext]"
+                }
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(svg|png|jpg|gif|webp)$/i,
                 type: 'asset',
+                parser:{
+                    dataUrlCondition: {
+                        maxSize: 0, // 小于 8KB 的图片转为 Data URL
+                    }
+                },
+                generator:{
+                    filename:"image/[name][hash][ext][query]"
+                }
             },
             {
-                test: /\.txt/,
-                type: 'asset/source',
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource', // 大于指定大小的文件将生成单独的文件
+                generator:{
+                    filename:"fonts/[name][hash][ext][query]"
+                }
+            },
+            {
+                test: /\.html$/,
+                use: [{
+                    loader:'html-loader',
+                    options: {
+                        esModule: false, // 关闭 esModule 防止模块冲突
+                        sources: true,  // 关闭自动解析 HTML 文件中的 <img src> 等依赖，交由 HtmlWebpackPlugin 处理
+                    },
+                }],
+                
+                generator:{
+                    filename:"fonts/[name][hash][ext][query]"
+                }
             }
+            // {
+            //     test: /\.txt/,
+            //     type: 'asset/source'
+            // },
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //     //     {
+            //     //     loader:'extract-loader'
+            //     // },
+            //     {
+            //         loader:'html-loader',
+            //         options:{
+            //             minimize:false
+            //             // sources: {
+            //             //     list:[
+            //             //         '...',
+            //             //         {
+            //             //             attribute:"data-original",
+            //             //             type: 'src',
+            //             //             filter: (tag, attribute, attributes, resourcePath) => {
+            //             //                 // The `tag` argument contains a name of the HTML tag.
+            //             //                 // The `attribute` argument contains a name of the HTML attribute.
+            //             //                 // The `attributes` argument contains all attributes of the tag.
+            //             //                 // The `resourcePath` argument contains a path to the loaded HTML file.
+                      
+            //             //                 // choose all HTML tags except img tag
+            //             //                 return tag.toLowerCase() == 'img';
+            //             //             },
+            //             //         }
+            //             //     ]
+            //             // }
+            //         }
+            //     }],
+            // },
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
@@ -82,7 +159,7 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
-    },
+    }
 };
 
 

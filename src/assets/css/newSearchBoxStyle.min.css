@@ -134,7 +134,7 @@
   width: 0;
 }
 .fk-newSearchSelectMenu .fk-searchMenuImgArrow {
-  background: url(/image/v2/vbg01.png?v=202303061117) -637px -1168px no-repeat;
+  background: url(../img/v2/vbg01.png) -637px -1168px no-repeat;
   display: inline-block;
   float: left;
   height: 10px;
