@@ -134,7 +134,10 @@ const config = {
     },
     optimization:{
         realContentHash:false
-    }
+    },
+    externals: {
+        'jquery': 'jQuery',  // 假设 `define` 语句是依赖 jQuery
+    },
 };
 
 
