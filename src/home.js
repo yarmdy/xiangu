@@ -16,6 +16,9 @@ require('./scripts/2052.min.js')
 require('./scripts/site.min.js')
 require('./scripts/module.min.js')
 
+require('./scripts/photoSlide.min.js')
+require('./scripts/imageEffect.min.js')
+
 window.Hosts = {
     portal: "i.fkw.com",
     home: "www.fkw.com",
@@ -8224,16 +8227,16 @@ window.Hosts = {
 
     // 在线视频模块
 
-    $LAB.script("./scripts/photoSlide.min.js");
+    //$LAB.script("./scripts/photoSlide.min.js");
 
-    $LAB
-      .script("./scripts/imageEffect.min.js")
-      .wait(function () {
-        jzUtils.trigger({
-          name: "ImageEffect.FUNC.BASIC.Init",
-          base: Site,
-        });
-      });
+    // $LAB
+    //   .script("./scripts/imageEffect.min.js")
+    //   .wait(function () {
+    //     jzUtils.trigger({
+    //       name: "ImageEffect.FUNC.BASIC.Init",
+    //       base: Site,
+    //     });
+    //   });
   } catch (e) {
     e.innerError = true;
     throw e;
