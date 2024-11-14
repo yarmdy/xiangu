@@ -1,18 +1,18 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-import lodash from 'lodash';
-import fs  from 'fs';
-import path,{join,dirname}  from 'path';
-import HtmlWebpackPlugin  from 'html-webpack-plugin';
-import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
-import { title } from 'process';
-import { fileURLToPath } from 'url';  // 用于将 url 转换为路径
-import {PurgeCSSPlugin} from 'purgecss-webpack-plugin';
+const lodash = require('lodash');
+const fs = require('fs');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { title } = require('process');
+const { fileURLToPath } = require('url');  // 用于将 url 转换为路径
+const {PurgeCSSPlugin} = require('purgecss-webpack-plugin');
 
-import {glob} from 'glob'
+const {glob} = require('glob');
 
-const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
-const __dirname = dirname(__filename);  // 获取当前文件的目录
-const paths = {src:join(__dirname,"src")}
+//const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
+//const __dirname = dirname(__filename);  // 获取当前文件的目录
+const paths = {src:path.join(__dirname,"src")}
 
 
 const isProduction = process.env.NODE_ENV == 'production';
@@ -27,8 +27,7 @@ const config = {
         errorDetails: true,
     },
     entry: {
-        // home:'./src/home.ts'
-        index:['./src/index.ts']
+        home:'./src/home.ts'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -40,21 +39,13 @@ const config = {
         host: 'localhost'
     },
     plugins: [
-        // new HtmlWebpackPlugin({
-        //     template: './src/home.html',
-        //     filename:"home.html",
-        //     chunks: ['home']
-        // }),
-
-        // new HtmlWebpackPlugin({
-        //     template: './src/index.html',
-        //     filename:"index.html",
-        //     chunks: ['index']
-        // }),
-
-        new MiniCssExtractPlugin({
-            filename:"[name].css"
+        new HtmlWebpackPlugin({
+            template: './src/home.html',
+            filename:"[name].html",
+            chunks: ['home']
         }),
+
+        new MiniCssExtractPlugin(),
 
         new PurgeCSSPlugin({
             paths:glob.sync(`${paths.src}/**/*`,{nodir:true})
@@ -65,24 +56,18 @@ const config = {
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.(ts|tsx)$/i,
-            //     loader: 'ts-loader',
-            //     exclude: ['/node_modules/'],
-            // },
-            // {
-            //     test: /\.css$/i,
-            //     use: [stylesHandler,'css-loader'],
-            //     generator :{
-            //         filename:"[name]_1[ext]"
-            //     }
-            // },
+            {
+                test: /\.(ts|tsx)$/i,
+                loader: 'ts-loader',
+                exclude: ['/node_modules/'],
+            },
+            {
+                test: /\.css$/i,
+                use: [stylesHandler,'css-loader']
+            },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'sass-loader'],
-                generator :{
-                    filename:"[name]_1[ext]"
-                }
+                use: [stylesHandler, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(svg|png|jpg|gif|webp)$/i,
@@ -103,55 +88,42 @@ const config = {
                     filename:"fonts/[name][hash][ext][query]"
                 }
             },
+            
+            {
+                test: /\.txt/,
+                type: 'asset/source'
+            },
             {
                 test: /\.html$/,
-                use: [{
+                use: [
+                //     {
+                //     loader:'extract-loader'
+                // },
+                {
                     loader:'html-loader',
-                    options: {
-                        esModule: false, // 关闭 esModule 防止模块冲突
-                        sources: true,  // 关闭自动解析 HTML 文件中的 <img src> 等依赖，交由 HtmlWebpackPlugin 处理
-                    },
-                }],
-                
-                generator:{
-                    filename:"fonts/[name][hash][ext][query]"
-                }
-            }
-            // {
-            //     test: /\.txt/,
-            //     type: 'asset/source'
-            // },
-            // {
-            //     test: /\.html$/,
-            //     use: [
-            //     //     {
-            //     //     loader:'extract-loader'
-            //     // },
-            //     {
-            //         loader:'html-loader',
-            //         options:{
-            //             minimize:false
-            //             // sources: {
-            //             //     list:[
-            //             //         '...',
-            //             //         {
-            //             //             attribute:"data-original",
-            //             //             type: 'src',
-            //             //             filter: (tag, attribute, attributes, resourcePath) => {
-            //             //                 // The `tag` argument contains a name of the HTML tag.
-            //             //                 // The `attribute` argument contains a name of the HTML attribute.
-            //             //                 // The `attributes` argument contains all attributes of the tag.
-            //             //                 // The `resourcePath` argument contains a path to the loaded HTML file.
+                    options:{
+                        minimize:false,
+                        sources: {
+                            list:[
+                                '...',
+                                {
+                                    attribute:"data-original",
+                                    type: 'src',
+                                    filter: (tag, attribute, attributes, resourcePath) => {
+                                        // The `tag` argument contains a name of the HTML tag.
+                                        // The `attribute` argument contains a name of the HTML attribute.
+                                        // The `attributes` argument contains all attributes of the tag.
+                                        // The `resourcePath` argument contains a path to the loaded HTML file.
                       
-            //             //                 // choose all HTML tags except img tag
-            //             //                 return tag.toLowerCase() == 'img';
-            //             //             },
-            //             //         }
-            //             //     ]
-            //             // }
-            //         }
-            //     }],
-            // },
+                                        // choose all HTML tags except img tag
+                                        return tag.toLowerCase() == 'img';
+                                    },
+                                }
+                            ]
+                        }
+                    }
+                }],
+            },
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
@@ -159,12 +131,15 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    },
+    optimization:{
+        realContentHash:false
     }
 };
 
 
 
-export default () => {
+exports.default = () => {
     if (isProduction) {
         config.mode = 'production';
         
