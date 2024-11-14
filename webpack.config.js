@@ -8,6 +8,8 @@ const { title } = require('process');
 const { fileURLToPath } = require('url');  // 用于将 url 转换为路径
 const {PurgeCSSPlugin} = require('purgecss-webpack-plugin');
 
+//const {IgnorePlugin} = require('webpack');
+
 const {glob} = require('glob');
 
 //const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
@@ -49,7 +51,14 @@ const config = {
 
         new PurgeCSSPlugin({
             paths:glob.sync(`${paths.src}/**/*`,{nodir:true})
-        })
+        }),
+
+        // new IgnorePlugin({
+        //     checkResource(resource,context) {
+        //         // 如果资源路径匹配 'require' 或 'define'，则忽略
+        //         return /\/scripts\//i.test(resource);
+        //     }
+        // })
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -124,7 +133,14 @@ const config = {
                     }
                 }],
             },
-
+            {
+                test:/\.js$/i,
+                use:[
+                    {
+                        loader:'babel-loader'
+                    }
+                ]
+            }
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
@@ -135,9 +151,9 @@ const config = {
     optimization:{
         realContentHash:false
     },
-    externals: {
-        'jquery': 'jQuery',  // 假设 `define` 语句是依赖 jQuery
-    },
+    externals:{
+        jquery: 'jQuery',  // 假设你有一个外部的 jQuery 依赖
+    }
 };
 
 
