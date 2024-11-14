@@ -79,7 +79,7 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader']
             },
             {
-                test: /(?<!qrCode)\.(svg|png|jpg|gif|webp)$/i,
+                test: /\.(svg|png|jpg|gif|webp|htc)$/i,
                 type: 'asset',
                 parser:{
                     dataUrlCondition: {
@@ -88,6 +88,18 @@ const config = {
                 },
                 generator:{
                     filename:"image/[name][hash][ext][query]"
+                }
+            },
+            {
+                test: /\.htc$/i,
+                type: 'asset',
+                parser:{
+                    dataUrlCondition: {
+                        maxSize: 0, // 小于 8KB 的图片转为 Data URL
+                    }
+                },
+                generator:{
+                    filename:"htc/[name][hash][ext][query]"
                 }
             },
             {
