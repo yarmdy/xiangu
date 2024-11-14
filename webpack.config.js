@@ -27,7 +27,7 @@ const config = {
         errorDetails: true,
     },
     entry: {
-        home:'./src/home.ts'
+        home:'./src/home.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
