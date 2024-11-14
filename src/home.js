@@ -1,5 +1,8 @@
 require('./assets/sass/home.scss')
 
+require('./scripts/global.js')
+
+
 require('./scripts/vue-2.7.14.min.js')
 require('./scripts/comMethods.min.js')
 require('./scripts/jzUtils2.min.js')
@@ -18,6 +21,10 @@ require('./scripts/module.min.js')
 
 require('./scripts/photoSlide.min.js')
 require('./scripts/imageEffect.min.js')
+
+require('./scripts/index.min.js')
+
+require('./scripts/module_webRightBar.min.js')
 
 window.Hosts = {
     portal: "i.fkw.com",
@@ -45,62 +52,62 @@ window.Hosts = {
     JSSdkReport: "report.fkw.com",
     homeDomain: "fkw.com",
   };
-  var _perfGray = true;
-  var _portalHost = "i.fkw.com";
-  var _mallJzallsiteHost = "i.mall.fkw.com";
-  var _wid = 300;
+      window._perfGray = true;
+      window._portalHost = "i.fkw.com";
+      window._mallJzallsiteHost = "i.mall.fkw.com";
+      window._wid = 300;
   if (typeof Fai == "undefined") {
     Fai = {};
     Fai.top = window;
   }
-  var _lcid = 2052,
-    _isNoFormIndex = true,
-    _curLanCode = "cn",
-    _openStaticUrl = false,
-    defaultLcid = 2052,
-    _aid = 27538880,
-    statId = -1,
-    _debug = false,
-    _isPre = false,
-    _siteDomain = "//www.ychxmt.com",
-    _resRoot = "//0.ss.508sys.com",
-    _colId = 2,
-    newsDetailPage = 7,
-    productDetailPage = 8,
-    photoDetailPage = 22,
-    _fromColId = -1,
-    _designAuth = false,
-    _manageMode = false,
-    _oem = false,
-    siteVipBeforeExpireDays = 492,
-    siteVipBeforeExpireHours = 0,
-    _getVipVipStartTime = {
+      window._lcid = 2052;
+    window._isNoFormIndex = true;
+    window._curLanCode = "cn";
+    window._openStaticUrl = false;
+    window.defaultLcid = 2052;
+    window._aid = 27538880;
+    window.statId = -1;
+    window._debug = false;
+    window._isPre = false;
+    window._siteDomain = "//www.ychxmt.com";
+    window._resRoot = "//0.ss.508sys.com";
+    window._colId = 2;
+    window.newsDetailPage = 7;
+    window.productDetailPage = 8;
+    window.photoDetailPage = 22;
+    window._fromColId = -1;
+    window._designAuth = false;
+    window._manageMode = false;
+    window._oem = false;
+    window.siteVipBeforeExpireDays = 492;
+    window.siteVipBeforeExpireHours = 0;
+    window._getVipVipStartTime = {
       siteVipStartMoreThan7Days: true,
       siteVipStartMoreThan30DaysAllSite: true,
       siteVipVipStartTime: "2022-03-18 15:50:34",
     },
-    _siteVer = 30,
-    _fdpSiteVer = 3,
-    _manageStatus = false,
-    __noTable = true,
-    __noGmain = true,
-    _vueStyleGrayTest = false,
-    _mutationObLog = false,
-    _simpleTextGrayTest = true,
-    _mutationObGrayTest = true,
-    _openRemoveUrlArgs = false,
-    _setReqHttpOnlyCookie = true,
-    _useFullUrl = false,
-    newUserHasAddModule = true,
-    _floatImgLazyLoadGrayTest = true,
-    _showFirstOpenRapid = false,
-    _isTemplateVersion2 = true,
-    _uiMode = false,
-    _openBannerLazyOptimize = true,
-    isWaterMarkUser = false;
+    window._siteVer = 30;
+    window._fdpSiteVer = 3;
+    window._manageStatus = false;
+    window.__noTable = true;
+    window.__noGmain = true;
+    window._vueStyleGrayTest = false;
+    window._mutationObLog = false;
+    window._simpleTextGrayTest = true;
+    window._mutationObGrayTest = true;
+    window._openRemoveUrlArgs = false;
+    window._setReqHttpOnlyCookie = true;
+    window._useFullUrl = false;
+    window.newUserHasAddModule = true;
+    window._floatImgLazyLoadGrayTest = true;
+    window._showFirstOpenRapid = false;
+    window._isTemplateVersion2 = true;
+    window._uiMode = false;
+    window._openBannerLazyOptimize = true;
+    window.isWaterMarkUser = false;
 
   Fai.top._oldFooterGuideUrl = "//jz.fkw.com/blog/5405";
-  _cusSiteWidth = 1440;
+    window._cusSiteWidth = 1440;
   Fai.top._uploadImgSizeLimit = 10;
   Fai.top.isReActive = false;
   Fai.top.jzCustodyExpireShowAD = false;
@@ -110,10 +117,10 @@ window.Hosts = {
   };
   Fai.top.openMultiPdInquiry = false;
 
-  var __jzFrontendResRoot__ = "//jzfe.faisys.com";
+      window.__jzFrontendResRoot__ = "//jzfe.faisys.com";
 
-  var _webRightBarMyItemList = [];
-  var _extendParam = {
+      window._webRightBarMyItemList = [];
+  window._extendParam = {
     skipUrl: "/index.jsp",
     isPhotoGroup: false,
   };
@@ -137,7 +144,7 @@ window.Hosts = {
       '{"skipUrl":"/index.jsp","isPhotoGroup":false}'
     );
   });
-  var FirstPaintData = {
+  window.FirstPaintData = {
     member: {
       memberTopbarVisible: true,
       loginScript: "./scripts/index.min.js",
@@ -468,33 +475,33 @@ window.Hosts = {
     Fai.top.isJzDesignRevisionNotice = false;
     Fai.top.webpOptOpen = true;
     Fai.top.viewUrl = "https://www.ychxmt.com/cn/view.jsp";
-    var _Global = {},
-      _newRapidSite = true,
-      _canNewsScore = false,
-      bgmCloseToOpen = false,
-      _newsGuideJumpToTemplateUrl = "sf16590494.jz.fkw.com",
-      isGuide_sample = false,
-      _showNewUsersGuide = false,
-      _newsGuideClickHelp = false,
-      _newsGuideCopyDemo = false,
-      _newsGuideReplaceImg = false,
-      _newsGuideAddModule = false,
-      _newsGuideClickPanel = false,
-      newGuideCreateCol = false,
-      newGuideEditBanner = false,
-      newPhotoSlidesGrayTest = true,
-      _loginDays = 1,
-      _devMode = false,
-      _guideNewUserStep = -1,
-      _inGuideNewUser = false,
-      _isSupportPreTestUser = false,
-      optingStep = 0,
-      guide_continue = 0,
-      _creatNewSite = false,
-      _isOpenRapid = false,
-      isEnterRapidFirst = false,
-      _newUser = false,
-      _colOtherStyleData = {
+        window._Global = {};
+    window._newRapidSite = true;
+    window._canNewsScore = false;
+    window.bgmCloseToOpen = false;
+    window._newsGuideJumpToTemplateUrl = "sf16590494.jz.fkw.com";
+    window.isGuide_sample = false;
+    window._showNewUsersGuide = false;
+    window._newsGuideClickHelp = false;
+    window._newsGuideCopyDemo = false;
+    window._newsGuideReplaceImg = false;
+    window._newsGuideAddModule = false;
+    window._newsGuideClickPanel = false;
+    window.newGuideCreateCol = false;
+    window.newGuideEditBanner = false;
+    window.newPhotoSlidesGrayTest = true;
+    window._loginDays = 1;
+    window._devMode = false;
+    window._guideNewUserStep = -1;
+    window._inGuideNewUser = false;
+    window._isSupportPreTestUser = false;
+    window.optingStep = 0;
+    window.guide_continue = 0;
+    window._creatNewSite = false;
+    window._isOpenRapid = false;
+    window.isEnterRapidFirst = false;
+    window._newUser = false;
+    window._colOtherStyleData = {
         independentList: [],
         hh: false,
         fh: false,
@@ -503,7 +510,7 @@ window.Hosts = {
         layout4Width: 0,
         layout5Width: 0,
       },
-      _templateOtherStyleData = {
+    window._templateOtherStyleData = {
         independentList: [],
         hh: true,
         fh: false,
@@ -512,23 +519,23 @@ window.Hosts = {
         layout4Width: 0,
         layout5Width: 0,
       },
-      _allowedHtmlUrl = false,
-      _openHtmlUrl = false,
-      _isBUser = false,
-      showQRCode = false,
-      productQRCodeOpen = false,
-      _isCliIdBUse = true,
-      manageClose = false,
-      isFirstLogin = false,
-      _isMallWeb = false,
-      _proSiteQueryStr = "", //by jser
-      httpStr = "https://",
-      _fromModuleCenter = false,
-      _fromJzAllSite = false,
-      vipExpireTime = "2026-03-18 15:50:34",
-      _companyGoalIsSite = false,
-      _companyGoal11 = 15,
-      _headerTopStyle = {
+    window._allowedHtmlUrl = false;
+    window._openHtmlUrl = false;
+    window._isBUser = false;
+    window.showQRCode = false;
+    window.productQRCodeOpen = false;
+    window._isCliIdBUse = true;
+    window.manageClose = false;
+    window.isFirstLogin = false;
+    window._isMallWeb = false;
+    window._proSiteQueryStr = "", //by jser
+    window.httpStr = "https://";
+    window._fromModuleCenter = false;
+    window._fromJzAllSite = false;
+    window.vipExpireTime = "2026-03-18 15:50:34",
+    window._companyGoalIsSite = false;
+    window._companyGoal11 = 15;
+    window._headerTopStyle = {
         hts: -1,
         hg: {
           c: "transparent",
@@ -564,7 +571,7 @@ window.Hosts = {
         },
         se: false,
       }, // 顶部样式（模板）
-      _customHeaderTopStyle = {
+    window._customHeaderTopStyle = {
         hts: -1,
         hg: {
           f: "",
@@ -600,7 +607,7 @@ window.Hosts = {
         },
         se: false,
       }, // 自定义顶部样式
-      _titleData = {
+    window._titleData = {
         x: '<span style="color: rgb(241, 58, 58);"><span style="font-size:27px;"><div style="" class="newPrimaryTitle">网站模板\u2014空白模板<\/div><\/span><\/span>',
         fp: false,
         st: {
@@ -646,8 +653,8 @@ window.Hosts = {
     _Global.newsManage = false;
     (_Global._useTemplateBackground = true),
       (_Global.openSuspendServ = false),
-      (_useTemplateLocale = true),
-      (_localeData = {
+      (window._useTemplateLocale = true),
+      (window._localeData = {
         ms: 7,
         h: false,
         x: "中文",
@@ -716,7 +723,7 @@ window.Hosts = {
           fp: false,
         },
       }),
-      (_templateLocaleData = {
+      (window._templateLocaleData = {
         ms: 7,
         h: false,
         x: "中文",
@@ -785,11 +792,11 @@ window.Hosts = {
           fp: false,
         },
       });
-    var datePickerCssSource =
+    window.datePickerCssSource =
       "/css/dist/styles/datepicker.min.css?v=202402221530";
 
-    var _homeHost = "www.fkw.com";
-    var _templateDefLayout = {
+        window._homeHost = "www.fkw.com";
+    window._templateDefLayout = {
       BANNER_NAV: 0,
       NAV_FLOAT: 1,
       LEFT_NAV_BANNER_RIGHT_HIDE: 3,
@@ -7319,14 +7326,14 @@ window.Hosts = {
 
       Site.initPage();
       setTimeout(afterModuleLoaded, 0);
-      Site.loadCss(
-        "./assets/css/bannerAnimation.min.css"
-      );
+    //   Site.loadCss(
+    //     "./assets/css/bannerAnimation.min.css"
+    //   );
 
       Site.triggerGobalEvent("siteReadyLoad");
     });
 
-    function afterModuleLoaded() {
+    window.afterModuleLoaded=function() {
       Site.initPage2();
       Site.initBackToTopTool(
         false,
@@ -7338,42 +7345,40 @@ window.Hosts = {
       Site.initElevatorNav();
     }
     // afterModuleLoaded end
-    var _jzProUrl = "",
-      _mallProUrl;
-    var _flyerManageDomain = "";
-    var _siteAdmDomain = "",
-      _jzHomeUrl = "",
-      _oemDocumentDomain;
+    window._jzProUrl = "",
+        window._flyerManageDomain = "";
+        window._siteAdmDomain = "";
+    window._jzHomeUrl = "";
 
     Fai.top._allSiteMallOemDomain = "i.mall.vip.webportal.top";
     Fai.top._jzAllSiteDomain = "i.jz.fkw.com";
-    var _allSiteDomain = "",
-      _allMallDomain = "",
-      _homeDomain = "";
+        window._allSiteDomain = "";
+    window._allMallDomain = "";
+    window._homeDomain = "";
 
-    _jzProUrl = "jz.fkw.com";
-    _mallProUrl = "mall.fkw.com";
-    _flyerManageDomain = "i.cd.fkw.com";
-    _siteAdmDomain = "fkw.com";
-    _jzHomeUrl = "jz.fkw.com";
-    _mallHomeUrl = "mall.fkw.com";
-    _allSiteDomain = "i.jz.fkw.com";
-    _allMallDomain = "i.mall.fkw.com";
-    _homeDomain = "fkw.com";
+    window._jzProUrl = "jz.fkw.com";
+    window._mallProUrl = "mall.fkw.com";
+    window._flyerManageDomain = "i.cd.fkw.com";
+    window._siteAdmDomain = "fkw.com";
+    window._jzHomeUrl = "jz.fkw.com";
+    window._mallHomeUrl = "mall.fkw.com";
+    window._allSiteDomain = "i.jz.fkw.com";
+    window._allMallDomain = "i.mall.fkw.com";
+    window._homeDomain = "fkw.com";
 
-    _oemDocumentDomain = "webportal.top";
+    window._oemDocumentDomain = "webportal.top";
     _Global._webRightBar = true;
-    var _isMemberLogin = false;
-    var _noCover = 0;
+        window._isMemberLogin = false;
+        window._noCover = 0;
     _Global._footerHidden = false;
     _Global._footerHiddenAllowed = true;
     _Global._memberTopBar = true;
     // 顶部登录条
-    var _navPositionFixTop = false;
+        window._navPositionFixTop = false;
     // 导航栏固定到顶部
-    var _elevatorNavStyleChanged = 0;
+        window._elevatorNavStyleChanged = 0;
     if (_Global.isHomePage) {
-      var _elevatorNav = {
+      window._elevatorNav = {
         s: 0,
         sc: "#fff",
         eil: [
@@ -7482,17 +7487,17 @@ window.Hosts = {
         },
       };
     }
-    var nav2SubMenu = [];
-    var nav106SubMenu = [];
-    var nav107SubMenu = [];
-    var nav101SubMenu = [];
-    var nav114SubMenu = [];
-    var nav105SubMenu = [];
-    var nav110SubMenu = [];
-    var nav102SubMenu = [];
+        window.nav2SubMenu = [];
+        window.nav106SubMenu = [];
+        window.nav107SubMenu = [];
+        window.nav101SubMenu = [];
+        window.nav114SubMenu = [];
+        window.nav105SubMenu = [];
+        window.nav110SubMenu = [];
+        window.nav102SubMenu = [];
 
-    var _useBannerVersionTwo = true;
-    var _customBackgroundData = {
+        window._useBannerVersionTwo = true;
+    window._customBackgroundData = {
       styleDefault: true,
       s: true,
       h: false,
@@ -7540,7 +7545,7 @@ window.Hosts = {
         y: 0,
       },
     };
-    var _templateBackgroundData = {
+    window._templateBackgroundData = {
       styleDefault: true,
       sw: 1440,
       wbs: 1,
@@ -7588,9 +7593,9 @@ window.Hosts = {
       bm: {},
       cm: {},
     };
-    var _resImageRoot = "//2.ss.508sys.com";
-    var _useBannerNewType = true;
-    var _templateBannerData = {
+        window._resImageRoot = "//2.ss.508sys.com";
+        window._useBannerNewType = true;
+    window._templateBannerData = {
       ce: {},
       pl: 0,
       s: 0,
@@ -7611,7 +7616,7 @@ window.Hosts = {
       tt: false,
       ws: false,
     };
-    var _pageBannerData = {
+    window._pageBannerData = {
       ce: {},
       pl: 0,
       s: 0,
@@ -7632,8 +7637,8 @@ window.Hosts = {
       tt: false,
       ws: false,
     };
-    var _bannerData = _templateBannerData;
-    var _templateBannerV2Data = {
+        window._bannerData = _templateBannerData;
+    window._templateBannerV2Data = {
       bl: [
         {
           t: 1,
@@ -7773,7 +7778,7 @@ window.Hosts = {
       },
       new_bt: true,
     };
-    var _pageBannerV2Data = {
+    window._pageBannerV2Data = {
       bl: [
         {
           t: 1,
@@ -7833,20 +7838,20 @@ window.Hosts = {
         url: "/image/no-pic.jpg",
       },
     };
-    var _bannerV2Data = _templateBannerV2Data;
-    var _closePhotoDetailEditSettings = true;
-    var _siteSeachRangeLength = 12;
-    var _useTemplateHeaderZone = true;
-    var _useTemplateFooterZone = true;
-    var _useTemplateBottomFloatLayer = true;
-    var _useTemplateTopAdv = true;
-    var _mallOpen = false;
-    var _couponOpen = false;
-    var toolBoxShowView = false;
-    var toolBoxShowSet = false;
-    var toolBoxShowABTool = false;
-    var _wideBanner = true;
-    var _navStyleData = {
+        window._bannerV2Data = _templateBannerV2Data;
+        window._closePhotoDetailEditSettings = true;
+        window._siteSeachRangeLength = 12;
+        window._useTemplateHeaderZone = true;
+        window._useTemplateFooterZone = true;
+        window._useTemplateBottomFloatLayer = true;
+        window._useTemplateTopAdv = true;
+        window._mallOpen = false;
+        window._couponOpen = false;
+        window.toolBoxShowView = false;
+        window.toolBoxShowSet = false;
+        window.toolBoxShowABTool = false;
+        window._wideBanner = true;
+    window._navStyleData = {
       no: true,
       s: 0,
       ns: {
@@ -8056,14 +8061,14 @@ window.Hosts = {
       ntmb: {},
       onft: false,
     };
-    var _useNavVersionTwo = true;
-    var _memberTopBar = true;
-    var _memberTopBar_versionTwo = true;
+        window._useNavVersionTwo = true;
+        window._memberTopBar = true;
+        window._memberTopBar_versionTwo = true;
     _Global._navHidden = false;
     _Global._topBarV2 = false;
     _Global._stylePanelV1 = false;
     _Global._stylePanelV2 = false;
-    var _useFooterVersionTwo = true;
+        window._useFooterVersionTwo = true;
 
     Fai.top._isDevDebug = false;
     Fai.top.checkUPlanAcct = false;
@@ -8089,12 +8094,12 @@ window.Hosts = {
     _Global.isFreeVer = false;
     _Global._hasBeiAn = true;
     _Global._hiddenMps = true;
-    _defaultFooterInfo = "";
-    var _cityJsLink = "/js/dist/libs/city2.min.js?v=202402281530";
-    var _floatBtnCssLink =
+    window._defaultFooterInfo = "";
+        window._cityJsLink = "/js/dist/libs/city2.min.js?v=202402281530";
+    window._floatBtnCssLink =
       "/css/dist/styles/floatBtn1.min.css?v=202402221530";
-    var _themeColorType = 1;
-    var _bgMusic = {
+        window._themeColorType = 1;
+    window._bgMusic = {
       o: true,
       l: true,
       v: 60,
@@ -8120,45 +8125,45 @@ window.Hosts = {
         },
       },
     };
-    var _sysIndex = 2;
-    var _siteDemo = false;
+        window._sysIndex = 2;
+        window._siteDemo = false;
 
-    var _isRealDemo = false;
+        window._isRealDemo = false;
     _Global._backToTop = true;
 
-    var _isGrayTestUser = true;
+        window._isGrayTestUser = true;
 
-    var _newLinkForSite = false;
-    var _siteType = 1;
-    var _usePrem = true;
-    var _acctCreateTime = 1625878551000;
-    var _siteId = 3;
-    var _isUseNewPanel = !_isMallWeb;
+        window._newLinkForSite = false;
+        window._siteType = 1;
+        window._usePrem = true;
+        window._acctCreateTime = 1625878551000;
+        window._siteId = 3;
+        window._isUseNewPanel = !_isMallWeb;
     // 是否使用新的面板
-    var _isMallDesigner = false;
-    var _hideHelp = false;
-    var _templateLayout = _templateDefLayout.NAV_FLOAT_ON_BANNER;
-    var _webBannerHeight = -1;
-    var _isNewUserForLayoutToNewVersion = true;
-    var _undo = {
+        window._isMallDesigner = false;
+        window._hideHelp = false;
+        window._templateLayout = _templateDefLayout.NAV_FLOAT_ON_BANNER;
+        window._webBannerHeight = -1;
+        window._isNewUserForLayoutToNewVersion = true;
+    window._undo = {
       allow: {
         undo: 0,
         redo: 0,
       },
     };
-    var _choiceCurrencyVal = "￥";
-    var siteCurrencyRight = false;
-    var _moduleAnimationPercent = -1;
-    var file_size_limit = parseInt("50");
+        window._choiceCurrencyVal = "￥";
+        window.siteCurrencyRight = false;
+        window._moduleAnimationPercent = -1;
+        window.file_size_limit = parseInt("50");
 
     _Global.styleChangeNum = 0;
     _Global.showSaveGuide = false;
     _Global.saveBtnState = 0;
     _Global.previewBtnState = 0;
     _Global.saveClickConut = 0;
-    var isJuly3FreeUser = false;
-    var _newUserGuide = false;
-    var videoSource = {
+        window.isJuly3FreeUser = false;
+        window._newUserGuide = false;
+    window.videoSource = {
       cssVideoJs: "/css/comm/video.js/video-js.min.css?v=202307101206",
       cssDistVideo: "/css/dist/styles/video.min.css?v=202407231110",
       jsVideo: "/js/comm/video.js/video.min.js?v=202307101206",
@@ -8177,13 +8182,13 @@ window.Hosts = {
     _newUserGuide = _isMallDesigner ? false : _newUserGuide;
     Site.getCouponByHdJump(0);
     Site.receiveCouponFromHd(false, 0, 0.0);
-    var _executedCountForUserGuide = 1;
-    var jzOpenTime = 1625878552000;
+        window._executedCountForUserGuide = 1;
+        window.jzOpenTime = 1625878552000;
 
-    var loginMemberSucJumpUrlIllegality = false;
+        window.loginMemberSucJumpUrlIllegality = false;
     _Global._siteAdvancedSetting = true;
 
-    var fk_old_onload = window.onload;
+        window.fk_old_onload = window.onload;
     $(window).load(function () {
       
 
@@ -8200,7 +8205,7 @@ window.Hosts = {
       if (false) {
         $(function () {
           function cssTest() {
-            var elem = document.createElement("x");
+                window.elem = document.createElement("x");
             elem.style.cssText = "pointer-events:auto";
             return elem.style.pointerEvents === "auto";
           }
@@ -8212,11 +8217,11 @@ window.Hosts = {
         });
       }
 
-      setTimeout(function () {
-        if (!Fai.isIE8() && !Fai.isIE7()) {
-          $LAB.script("./scripts/svg.min.js");
-        }
-      }, 0);
+    //   setTimeout(function () {
+    //     if (!Fai.isIE8() && !Fai.isIE7()) {
+    //       $LAB.script("./scripts/svg.min.js");
+    //     }
+    //   }, 0);
     });
     jzUtils.run({
       name: "Pre.errorReport",

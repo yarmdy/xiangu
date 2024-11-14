@@ -1,0 +1,1 @@
+window.qrcodePath = '/dist/image/qrCode.png';
