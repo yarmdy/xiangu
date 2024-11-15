@@ -49,9 +49,9 @@ const config = {
 
         new MiniCssExtractPlugin(),
 
-        new PurgeCSSPlugin({
-            paths:glob.sync(`${paths.src}/**/*`,{nodir:true})
-        }),
+        // new PurgeCSSPlugin({
+        //     paths:glob.sync(`${paths.src}/**/*`,{nodir:true})
+        // }),
 
         // new IgnorePlugin({
         //     checkResource(resource,context) {
@@ -175,9 +175,9 @@ const config = {
     optimization:{
         realContentHash:false
     },
-    externals:{
-        jquery: 'jQuery',  // 假设你有一个外部的 jQuery 依赖
-    }
+    // externals:{
+    //     jquery: 'jQuery',  // 假设你有一个外部的 jQuery 依赖
+    // }
 };
 
 

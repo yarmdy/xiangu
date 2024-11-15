@@ -56,8 +56,9 @@ window.Hosts = {
       window._portalHost = "i.fkw.com";
       window._mallJzallsiteHost = "i.mall.fkw.com";
       window._wid = 300;
+      var Fai=window.Fai;
   if (typeof Fai == "undefined") {
-    Fai = {};
+    Fai = window.Fai = {};
     Fai.top = window;
   }
       window._lcid = 2052;
@@ -475,7 +476,7 @@ window.Hosts = {
     Fai.top.isJzDesignRevisionNotice = false;
     Fai.top.webpOptOpen = true;
     Fai.top.viewUrl = "https://www.ychxmt.com/cn/view.jsp";
-        window._Global = {};
+        var _Global = window._Global = {};
     window._newRapidSite = true;
     window._canNewsScore = false;
     window.bgmCloseToOpen = false;
@@ -646,6 +647,7 @@ window.Hosts = {
         u: 0,
         ps: 0,
       };
+    
     _Global.useElevatorNav = false;
     _Global.isUseElevatorNav = true;
     _Global.isHomePage = true;
