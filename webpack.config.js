@@ -29,7 +29,8 @@ const config = {
         errorDetails: true,
     },
     entry: {
-        home:'./src/home.js'
+        home:'./src/home.js',
+        news:'./src/news.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -43,8 +44,13 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/home.html',
-            filename:"[name].html",
+            filename:"home.html",
             chunks: ['home']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/news.html',
+            filename:"news.html",
+            chunks: ['news']
         }),
 
         new MiniCssExtractPlugin(),
