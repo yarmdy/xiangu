@@ -1,6 +1,3 @@
-require('./scripts/global.js')
-
-
 require('./scripts/vue-2.7.14.min.js')
 require('./scripts/comMethods.min.js')
 require('./scripts/jzUtils2.min.js')
