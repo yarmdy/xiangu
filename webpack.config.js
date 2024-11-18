@@ -89,7 +89,7 @@ const config = {
                 type: 'asset',
                 parser:{
                     dataUrlCondition: {
-                        maxSize: 11264, // 小于 8KB 的图片转为 Data URL
+                        maxSize: 20480, // 小于 8KB 的图片转为 Data URL
                     }
                 },
                 generator:{
@@ -101,7 +101,7 @@ const config = {
                 type: 'asset',
                 parser:{
                     dataUrlCondition: {
-                        maxSize: 11264, // 小于 8KB 的图片转为 Data URL
+                        maxSize: 20480, // 小于 8KB 的图片转为 Data URL
                     }
                 },
                 generator:{
@@ -113,7 +113,7 @@ const config = {
                 type: 'asset',
                 parser:{
                     dataUrlCondition: {
-                        maxSize: 11264, // 小于 8KB 的图片转为 Data URL
+                        maxSize: 20480, // 小于 8KB 的图片转为 Data URL
                     }
                 },
                 generator:{

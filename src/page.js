@@ -1089,7 +1089,7 @@ window.Hosts = {
             w: 336,
             h: 180,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgopvskwYo8fiP8wMw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg7pvskwYoyubzrQQw0AI4tAE.png",
             isInit: false,
             isNeedCallFunc: true,
           },
@@ -1102,7 +1102,7 @@ window.Hosts = {
             squareSize: 0,
             borderRadius: 20,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgopvskwYo8fiP8wMw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg7pvskwYoyubzrQQw0AI4tAE.png",
             isInit: false,
           },
           callback: Site.createImageEffectContent_photo,
@@ -1167,7 +1167,7 @@ window.Hosts = {
             w: 336,
             h: 180,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgxZvskwYo7rWZ_QUw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgopvskwYo8fiP8wMw0AI4tAE.png",
             isInit: false,
             isNeedCallFunc: true,
           },
@@ -1180,7 +1180,7 @@ window.Hosts = {
             squareSize: 0,
             borderRadius: 20,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgxZvskwYo7rWZ_QUw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgopvskwYo8fiP8wMw0AI4tAE.png",
             isInit: false,
           },
           callback: Site.createImageEffectContent_photo,
@@ -1245,7 +1245,7 @@ window.Hosts = {
             w: 336,
             h: 180,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg2ZvskwYo6J3L6gQw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgxZvskwYo7rWZ_QUw0AI4tAE.png",
             isInit: false,
             isNeedCallFunc: true,
           },
@@ -1258,7 +1258,7 @@ window.Hosts = {
             squareSize: 0,
             borderRadius: 20,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg2ZvskwYo6J3L6gQw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAgxZvskwYo7rWZ_QUw0AI4tAE.png",
             isInit: false,
           },
           callback: Site.createImageEffectContent_photo,
@@ -1323,7 +1323,7 @@ window.Hosts = {
             w: 336,
             h: 180,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg7pvskwYoyubzrQQw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg2ZvskwYo6J3L6gQw0AI4tAE.png",
             isInit: false,
             isNeedCallFunc: true,
           },
@@ -1336,7 +1336,7 @@ window.Hosts = {
             squareSize: 0,
             borderRadius: 20,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg7pvskwYoyubzrQQw0AI4tAE.png",
+              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg2ZvskwYo6J3L6gQw0AI4tAE.png",
             isInit: false,
           },
           callback: Site.createImageEffectContent_photo,
@@ -2026,7 +2026,7 @@ window.Hosts = {
             w: 294,
             h: 187,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg587skwYoxJHDxAIwpgI4uwE.png?v=1689404941",
+              "//cdn.infrontsmart.com/FungusTest/S3Images/9be5fe7aa5c3d6d071f8c79bcfcf6f44.jpg",
             isInit: false,
             isNeedCallFunc: true,
           },
@@ -2039,7 +2039,7 @@ window.Hosts = {
             squareSize: 0,
             borderRadius: 20,
             picPath:
-              "//27538880.s21i.faiusr.com/4/3/ABUIABAEGAAg587skwYoxJHDxAIwpgI4uwE.png?v=1689404941",
+              "////cdn.infrontsmart.com/FungusTest/S3Images/9be5fe7aa5c3d6d071f8c79bcfcf6f44.jpg",
             isInit: false,
           },
           callback: Site.createImageEffectContent_photo,
@@ -3191,7 +3191,7 @@ window.Hosts = {
         },
       });
       //#region 新闻
-      jzModule.Module.activeModule({
+      var newsObj={
         module: {
           aid: 27538880,
           id: 1581,
@@ -5528,7 +5528,29 @@ window.Hosts = {
           type: 1,
           style: 116,
         },
-      });
+      };
+      fetch("/api?APICommand=Fungus_Get_NewInfContent")
+      .then(a=>a.json())
+      .then(a=>a.Export.Table.Row.filter((a,i)=>i<8))
+      .then(rows=>rows.map(a=>({
+        id: a["enc-keyValue"],
+        title: a.Title,
+        summary:a.Description,
+        picPath:a.NewInfImageURL,
+        newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+a["enc-keyValue"],
+        date: 1728635280000,
+      })))
+      .then(
+        a=>{
+          newsObj.module.newsList = a;
+          
+          jzModule.Module.activeModule(
+            newsObj
+          );
+          jzSite.lazyLoad.checkLazyLoad($("#module1581"))
+        }
+      );
+      
       //#endregion
       jzUtils.run(
         {
