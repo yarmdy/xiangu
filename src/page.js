@@ -1,5 +1,3 @@
-require('./assets/sass/home.scss')
-
 require('./scripts/global.js')
 
 
