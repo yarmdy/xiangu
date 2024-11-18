@@ -30,7 +30,8 @@ const config = {
     },
     entry: {
         home:'./src/home.js',
-        news:'./src/news.js'
+        news:'./src/news.js',
+        about:'./src/about.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -51,6 +52,11 @@ const config = {
             template: './src/news.html',
             filename:"news.html",
             chunks: ['news']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/about.html',
+            filename:"about.html",
+            chunks: ['about']
         }),
 
         new MiniCssExtractPlugin(),
