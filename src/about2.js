@@ -802,7 +802,7 @@ try {
 
         Site.loadLastLoginAcct('xp25623701');
 
-        Site.bindBeforeUnloadEvent(false, false, false);
+        //Site.bindBeforeUnloadEvent(false, false, false);
         Site.initTemplateLayout(_templateDefLayout.NAV_FLOAT_ON_BANNER, true, false);
 
         // ajax统计

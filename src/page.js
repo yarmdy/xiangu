@@ -874,7 +874,7 @@ window.Hosts = {
 
       Site.loadLastLoginAcct("xp25623701");
 
-      Site.bindBeforeUnloadEvent(false, false, false);
+      //Site.bindBeforeUnloadEvent(false, false, false);
       Site.initTemplateLayout(
         _templateDefLayout.NAV_FLOAT_ON_BANNER,
         true,
@@ -5524,7 +5524,7 @@ window.Hosts = {
           style: 116,
         },
       };
-      fetch("/api?APICommand=Fungus_Get_NewInfContent")
+      fetch("/api?APICommand=Fungus_Get_NewInfContent&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b")
       .then(a=>a.json())
       .then(a=>a.Export.Table.Row.filter((a,i)=>i<8))
       .then(rows=>rows.map(a=>({
@@ -5544,7 +5544,10 @@ window.Hosts = {
           );
           jzSite.lazyLoad.checkLazyLoad($("#module1581"))
         }
-      );
+      ).catch(e=>{
+        console.log(e);
+      });
+      
       
       //#endregion
       jzUtils.run(
