@@ -31,7 +31,8 @@ const config = {
     entry: {
         home:'./src/home.js',
         news:'./src/news.js',
-        about:'./src/about.js'
+        about:'./src/about.js',
+        newslist:'./src/newslist.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -40,7 +41,23 @@ const config = {
     },
     devServer: {
         open: '/home.html',
-        host: 'localhost'
+        host: 'localhost',
+        server: {
+            type: 'https',
+            options: {
+                pfx: fs.readFileSync(path.resolve(__dirname, 'iis.pfx')), // PFX 文件
+                passphrase: '123' // 如果 .pfx 文件有密码
+            }
+        },
+        proxy:[
+            {
+                context: ['/api'],  // 可以匹配路径的前缀
+                target: 'https://fungustest.infrontsmart.com',  // 目标服务地址
+                changeOrigin: true, // 修改请求头中的 Origin 字段
+                //pathRewrite: { '/api': '' }, // 将路径中的 /api 去掉
+                secure: false, // 是否验证 SSL
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -57,6 +74,11 @@ const config = {
             template: './src/about.html',
             filename:"about.html",
             chunks: ['about']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/newslist.html',
+            filename:"newslist.html",
+            chunks: ['newslist']
         }),
 
         new MiniCssExtractPlugin(),

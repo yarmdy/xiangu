@@ -1,3 +1,5 @@
+const { getNewsListByTotal : getList } = require('./scripts/apirequest.js')
+
 require('./scripts/vue-2.7.14.min.js')
 require('./scripts/comMethods.min.js')
 require('./scripts/jzUtils2.min.js')
@@ -20,6 +22,8 @@ require('./scripts/imageEffect.min.js')
 require('./scripts/index.min.js')
 
 require('./scripts/module_webRightBar.min.js')
+
+
 
 
 window.Hosts = {
@@ -5524,16 +5528,15 @@ window.Hosts = {
           style: 116,
         },
       };
-      fetch("/api?APICommand=Fungus_Get_NewInfContent&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b")
-      .then(a=>a.json())
-      .then(a=>a.Export.Table.Row.filter((a,i)=>i<8))
-      .then(rows=>rows.map(a=>({
+
+      getList(0,8)
+      .then(rows=>rows.list.map(a=>({
         id: a["enc-keyValue"],
         title: a.Title,
         summary:a.Description,
         picPath:a.NewInfImageURL,
-        newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+a["enc-keyValue"],
-        date: 1728635280000,
+        newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+a["enc-keyValue"]+"&index="+a.index+"&title="+encodeURIComponent(a.Title),
+        date: 1728635280000
       })))
       .then(
         a=>{
@@ -5547,7 +5550,6 @@ window.Hosts = {
       ).catch(e=>{
         console.log(e);
       });
-      
       
       //#endregion
       jzUtils.run(
@@ -8051,7 +8053,7 @@ window.Hosts = {
       base: window,
     });
 
-    Site.beforeUnloadFunc(statId);
+    //Site.beforeUnloadFunc(statId);
 
     // 在线视频模块
 
