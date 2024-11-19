@@ -2543,23 +2543,27 @@ try {
                 "style": 116
             }
         };
-        getList(0,10)
-        .then(a=>{
-            listObj.module.newsList = a.list.map(b=>({
-                id: b["enc-keyValue"],
-                title: b.Title,
-                summary:b.Description,
-                picPath:b.NewInfImageURL,
-                newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+b["enc-keyValue"]+"&index="+b.index+"&title="+encodeURIComponent(b.Title),
-                date: 1728635280000
-              }));
-              var totalPage = parseInt(a.total/10)+(a.total%10==0?0:1);
-              listObj.module.pageHtml = createPagerHtml("pagenation787",1,totalPage);
-            jzModule.Module.activeModule(
-                listObj
-            );
-            jzSite.lazyLoad.checkLazyLoad($("#module787"))
-        });
+        
+        window.gotoPage=function(page){
+            getList((page-1)*10,10)
+            .then(a=>{
+                listObj.module.newsList = a.list.map(b=>({
+                    id: b["enc-keyValue"],
+                    title: b.Title,
+                    summary:b.Description,
+                    picPath:b.NewInfImageURL,
+                    newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+b["enc-keyValue"]+"&index="+b.index+"&title="+encodeURIComponent(b.Title),
+                    date: 1728635280000
+                }));
+                var totalPage = parseInt(a.total/10)+(a.total%10==0?0:1);
+                listObj.module.pageHtml = createPagerHtml("pagenation787",page,totalPage,"gotoPage");
+                jzModule.Module.activeModule(
+                    listObj
+                );
+                jzSite.lazyLoad.checkLazyLoad($("#module787"))
+            });
+        }
+        gotoPage(1);
         
         jzModule.SimpleTextModule.initSimpleTextLazyLoad({
             "fontList": [],

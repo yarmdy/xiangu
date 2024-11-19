@@ -20,13 +20,15 @@ const ins = {
         }
         return await ins.getNewsList(offset,limit).then(a=>({total,list:a}));
     },
-    createPagerHtml(id,page,total){
+    createPagerHtml(id,page,total,gotoPage){
         var html=[];
         html.push(`<div id="${id}" class="pagenation pagination_1">`);
-        //第一页
+        //上一页
         html.push(`<span class="pagePrev">`);
         if(page!=1){
-            html.push(`<a>上一页</a>`)
+            html.push(`<a hidefocus="true" class="g_border js_pagination" href="javascript:;"
+            data-href="javascript:;"
+            onclick="window.${gotoPage}(${page-1});event.stopPropagation();return false;">上一页</a>`)
         }else{
             html.push(`<span>上一页</span>`)
         }
@@ -45,7 +47,7 @@ const ins = {
             }
             html.push(`<span class="pageNo"><a hidefocus="true" class="g_border js_pagination" href="javascript:;"
             data-href="javascript:;"
-            onclick="event.stopPropagation();return false;"><span>${i}</span></a></span>`);
+            onclick="window.${gotoPage}(${i});event.stopPropagation();return false;"><span>${i}</span></a></span>`);
         }
         if(hasAfter){
             html.push(`<span class="pageEllipsis"><span>...</span></span>`);
@@ -53,7 +55,9 @@ const ins = {
         //下一页
         html.push(`<span class="pageNext">`);
         if(page!=total){
-            html.push(`<a>下一页</a>`)
+            html.push(`<a hidefocus="true" class="g_border js_pagination" href="javascript:;"
+            data-href="javascript:;"
+            onclick="window.${gotoPage}(${page+1});event.stopPropagation();return false;">下一页</a>`)
         }else{
             html.push(`<span>下一页</span>`)
         }
