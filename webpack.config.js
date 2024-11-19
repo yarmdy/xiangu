@@ -106,11 +106,11 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader']
+                use: [stylesHandler,'css-loader','./src/preprocessing-loader.js']
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'sass-loader']
+                use: [stylesHandler, 'css-loader', 'sass-loader','./src/preprocessing-loader.js']
             },
             {
                 test: /\.(svg|png|jpg|gif|webp|htc)$/i,
@@ -189,7 +189,7 @@ const config = {
                             ]
                         }
                     }
-                }],
+                },'./src/preprocessing-loader.js'],
             },
             {
                 test:/\.js$/i,

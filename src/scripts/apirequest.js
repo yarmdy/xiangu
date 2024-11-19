@@ -8,9 +8,9 @@ const ins = {
         });
     },
     getNewsTotalCount(){
-        return fetch(`/api?APICommand=Fungus_Get_NewInfContent&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b&SelectMaxRecords=${100000000}`)
+        return fetch(`/api?APICommand=Fungus_Get_NewInfContent_Record&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b`)
         .then(a=>a.json())
-        .then(a=>a.Export.Table.Row.length)
+        .then(a=>a.Export.Report.Row[0].RecordCount)
         .catch(a=>console.log(a),0);
     },
     async getNewsListByTotal(offset,limit){
@@ -67,3 +67,6 @@ const ins = {
     }
 };
 module.exports = ins;
+// const { getNewsList,getNewsTotalCount,getNewsListByTotal,createPagerHtml } = ins;
+
+// export { getNewsList,getNewsTotalCount,getNewsListByTotal,createPagerHtml };
