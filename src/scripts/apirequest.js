@@ -92,7 +92,7 @@ const ins = {
         return decodeURIComponent(res);
     },
     getNewsDetail(id){
-        return fetch(`/api?APICommand=Fungus_Get_NewInfContent_Details&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b&Parameters=F:KeyValue~V:{id}~O:E`)
+        return fetch(`/api?APICommand=Fungus_Get_NewInfContent_Details&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b&Parameters=F:KeyValue~V:${id}~O:E`)
         .then(a=>a.json())
         .then(a=>a.Export.Table.Row.map(b=>b["View Link_DBValue"].split("|")[2]))
         .catch(a=>[]);
