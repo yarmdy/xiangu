@@ -1,4 +1,5 @@
-const { getNewsListByTotal : getList } = require('./scripts/apirequest.js')
+const { getNewsListByTotal : getList,getLastNextNews,getQuery,getNewsDetail } = require('./scripts/apirequest.js')
+const assets = require('./scripts/assetssetting.js');
 
 require('./scripts/vue-2.7.14.min.js')
 require('./scripts/comMethods.min.js')
@@ -812,60 +813,133 @@ window.Hosts = {
     };
     Fai.top.isIncToVue = false;
 
+    
+
     $(function () {
       if (Fai.top.isJzCdnFlowLimit) {
         Site.initVideoResourceHandler();
         Site.initAudioResourceHandler();
       }
 
-      Site.ajaxLoadModuleDom(2, 0, {
-        _ajaxLoadModuleList: [],
-        _partDomInfoList: [],
-        fullUrl: "https://www.ychxmt.com/",
-        topBarOption: {
-          topBarParameter: {
-            _memberTopBar_versionTwo: true,
-            memberTopBarV2Param: {
-              st: 1,
-              qr: {
-                desc: "",
-                bg: "#000000",
-                unq: true,
-                link: {
-                  ide: "",
-                  moreJumpInfo: {
-                    t: 100,
-                    i: 3,
-                    u: "/",
-                    n: "首页",
-                    s: "AGQIAxIAGgA=",
+      if(document.querySelector("#module12")==null){
+        Site.ajaxLoadModuleDom(2, 0, {
+          _ajaxLoadModuleList: [],
+          _partDomInfoList: [],
+          fullUrl: "https://www.ychxmt.com/",
+          topBarOption: {
+            topBarParameter: {
+              _memberTopBar_versionTwo: true,
+              memberTopBarV2Param: {
+                st: 1,
+                qr: {
+                  desc: "",
+                  bg: "#000000",
+                  unq: true,
+                  link: {
+                    ide: "",
+                    moreJumpInfo: {
+                      t: 100,
+                      i: 3,
+                      u: "/",
+                      n: "首页",
+                      s: "AGQIAxIAGgA=",
+                    },
                   },
                 },
+                ll: [
+                  {
+                    id: "mobiWeb",
+                    o: true,
+                    si: true,
+                    nm: "二维码",
+                  },
+                  {
+                    id: "addBookMark",
+                    o: true,
+                    si: true,
+                    nm: "收藏本站",
+                  },
+                  {
+                    id: "myProfile",
+                    o: true,
+                    si: true,
+                    nm: "我的资料",
+                  },
+                ],
               },
-              ll: [
-                {
-                  id: "mobiWeb",
-                  o: true,
-                  si: true,
-                  nm: "二维码",
-                },
-                {
-                  id: "addBookMark",
-                  o: true,
-                  si: true,
-                  nm: "收藏本站",
-                },
-                {
-                  id: "myProfile",
-                  o: true,
-                  si: true,
-                  nm: "我的资料",
-                },
-              ],
             },
           },
-        },
-      });
+        });
+      }else{
+        var thisTitle = getQuery(location.search,"title");
+        var thisIndex = getQuery(location.search,"index");
+        var thisNewsId = getQuery(location.search,"NewsId");
+        document.querySelector("#module12 h1.title").innerHTML=thisTitle;
+        document.querySelector("#module12 div.richContent").innerHTML="";
+
+        getNewsDetail()
+        .then(a=>a.map(b=>`<p style="text-align: center"><img style="max-width:100%" class="lazyload_transparent float_in_img J_defImage" data-original="${b}" src="data:image/gif;base64,R0lGODlhAQABAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Zmf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8AZv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZM8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wAAJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZmmWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNmMzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAMwAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAANgALAAAAAABAAEAAAgEALEFBAA7" alt=""></p>`))
+        .then(a=>{
+          a.forEach(b=>document.querySelector("#module12 div.richContent").insertAdjacentHTML("afterEnd",b))
+          jzSite.lazyLoad.checkLazyLoad($("#module12"));
+        });
+        getLastNextNews(parseInt(thisIndex)).then(a=>{
+          var tmpdetail =  JSON.parse(JSON.parse(window.contentString).rtInfo);
+          tmpdetail.newsDetail.newsNextPreHtml = a;
+          var tmpcontent = JSON.parse(window.contentString);
+          tmpcontent.rtInfo = JSON.stringify(tmpdetail);
+          window.contentString = JSON.stringify(tmpcontent);
+          Site.ajaxLoadModuleDom(2, 0, {
+            _ajaxLoadModuleList: [],
+            _partDomInfoList: [],
+            fullUrl: "https://www.ychxmt.com/",
+            topBarOption: {
+              topBarParameter: {
+                _memberTopBar_versionTwo: true,
+                memberTopBarV2Param: {
+                  st: 1,
+                  qr: {
+                    desc: "",
+                    bg: "#000000",
+                    unq: true,
+                    link: {
+                      ide: "",
+                      moreJumpInfo: {
+                        t: 100,
+                        i: 3,
+                        u: "/",
+                        n: "首页",
+                        s: "AGQIAxIAGgA=",
+                      },
+                    },
+                  },
+                  ll: [
+                    {
+                      id: "mobiWeb",
+                      o: true,
+                      si: true,
+                      nm: "二维码",
+                    },
+                    {
+                      id: "addBookMark",
+                      o: true,
+                      si: true,
+                      nm: "收藏本站",
+                    },
+                    {
+                      id: "myProfile",
+                      o: true,
+                      si: true,
+                      nm: "我的资料",
+                    },
+                  ],
+                },
+              },
+            },
+          });
+        });
+        
+      }
 
       //Site.showOrHideMailBox();
       Site.initNewWXLogin(
@@ -4024,7 +4098,7 @@ window.Hosts = {
               browserTitle: "",
               pictureId: "ABUIABACGAAgkM2juAYoqM7S6gcwgAg45gQ",
               summary:
-                "公 告蟹满堂（京东）用户您好：关于2022年在京东自营平台下单的蟹满堂蟹卡的用户，由于京东暂时停止向品牌方后台授权，可联系公司4000-676-888电话，我司可根据您寄回卡券帮您处理提货大闸蟹。由此带来的不便之处，敬请谅解，并感谢各位对我公司信任与支持！ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特此公告",
+                "公 告🍄仙菇🍄（京东）用户您好：关于2022年在京东自营平台下单的🍄仙菇🍄蟹卡的用户，由于京东暂时停止向品牌方后台授权，可联系公司4000-676-888电话，我司可根据您寄回卡券帮您处理提货大闸蟹。由此带来的不便之处，敬请谅解，并感谢各位对我公司信任与支持！ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;特此公告",
               authMemberLevelId: -1,
               groupIds: "[]",
               attachIds: "[]",
@@ -4079,7 +4153,7 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 47,
-              title: "夏至已至｜蟹满堂如何坚守匠心，科学养殖大闸蟹？",
+              title: "夏至已至｜🍄仙菇🍄如何坚守匠心，科学养殖大闸蟹？",
               date: 1655789880000,
               type: "",
               top: 0,
@@ -4089,7 +4163,7 @@ window.Hosts = {
               seoKeyword: "夏至,阳澄湖,阳澄湖大闸蟹",
               seoDesc: "",
               author: "蔚然",
-              source: "蟹满堂",
+              source: "🍄仙菇🍄",
               link: "https://mp.weixin.qq.com/s?__biz=MzIzMDA1MjA5NA==&mid=2247494950&idx=1&sn=32f064c4f3e3d7b44ce455ddc7d7f93e&chksm=e8bbf4b7dfcc7da1f4a8eaafd7a3cf7488ef395da85dcd3496c4816eeed1ab886a14b8af3321#rd",
               sid: 1,
               views: 0,
@@ -4164,7 +4238,7 @@ window.Hosts = {
               createTime: 1647831195000,
               groupId: 0,
               updateTime: 1647831195000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4232,7 +4306,7 @@ window.Hosts = {
               createTime: 1647831208000,
               groupId: 0,
               updateTime: 1647831208000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4300,7 +4374,7 @@ window.Hosts = {
               createTime: 1647831218000,
               groupId: 0,
               updateTime: 1647831218000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4368,7 +4442,7 @@ window.Hosts = {
               createTime: 1647831221000,
               groupId: 0,
               updateTime: 1647831221000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4436,7 +4510,7 @@ window.Hosts = {
               createTime: 1647831231000,
               groupId: 0,
               updateTime: 1647831232000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4504,14 +4578,14 @@ window.Hosts = {
               createTime: 1647832070000,
               groupId: 0,
               updateTime: 1647832070000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
               flag: 8194,
               pictureId: "ABUIwOuQDRACGAAghtjfkQYovJXClwMwrAc4jwM",
               summary:
-                "金秋十月· 欢度国庆 ·团圆盛宴 &nbsp;&nbsp;蟹味先行蟹满堂大闸蟹 致谢全国中秋节后，国庆也接踵而至。自古以来，我国",
+                "金秋十月· 欢度国庆 ·团圆盛宴 &nbsp;&nbsp;蟹味先行🍄仙菇🍄大闸蟹 致谢全国中秋节后，国庆也接踵而至。自古以来，我国",
               authMemberLevelId: -1,
               groupIds: "[]",
               authBuddyGroupIdBit: 0,
@@ -4565,14 +4639,14 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 33,
-              title: "蟹满堂|一湖好水，奢养一品好蟹",
+              title: "🍄仙菇🍄|一湖好水，奢养一品好蟹",
               date: 1632197700000,
               type: "",
               top: 0,
               createTime: 1647832076000,
               groupId: 0,
               updateTime: 1647832076000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4642,15 +4716,15 @@ window.Hosts = {
               updateTime: 1651126844000,
               seoKeyword:
                 "大闸蟹蟹卡，大闸蟹礼券，团购大闸蟹，阳澄湖大闸蟹",
-              seoDesc: "苏州市蟹满堂阳澄湖大闸蟹提货通知",
-              author: "蟹满堂",
+              seoDesc: "苏州市🍄仙菇🍄阳澄湖大闸蟹提货通知",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
               flag: 8194,
               browserTitle: "",
               pictureId: "ABUIwOuQDRACGAAgjdjfkQYoxrSjxwIwhAY4yQI",
-              summary: "蟹满堂大闸蟹提货指南通知尊敬的蟹满堂客户：",
+              summary: "🍄仙菇🍄大闸蟹提货指南通知尊敬的🍄仙菇🍄客户：",
               authMemberLevelId: -1,
               groupIds: "[]",
               cusUrlAddress: "",
@@ -4704,14 +4778,14 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 35,
-              title: "蟹满堂中秋小团圆，鲜美大闸蟹吃起来~",
+              title: "🍄仙菇🍄中秋小团圆，鲜美大闸蟹吃起来~",
               date: 1631945869000,
               type: "",
               top: 0,
               createTime: 1647832085000,
               groupId: 0,
               updateTime: 1647832085000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4779,14 +4853,14 @@ window.Hosts = {
               createTime: 1647832092000,
               groupId: 0,
               updateTime: 1647832092000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
               flag: 8194,
               pictureId: "ABUIwOuQDRACGAAgnNjfkQYozL70mwEwrAc4jwM",
               summary:
-                "点击上方蓝字关注我们（蟹满堂阳澄湖大闸蟹养殖基地）售后无忧优质的售后服务是产品的核心附加值。秉承足斤足两、死",
+                "点击上方蓝字关注我们（🍄仙菇🍄阳澄湖大闸蟹养殖基地）售后无忧优质的售后服务是产品的核心附加值。秉承足斤足两、死",
               authMemberLevelId: -1,
               groupIds: "[]",
               authBuddyGroupIdBit: 0,
@@ -4847,7 +4921,7 @@ window.Hosts = {
               createTime: 1647832096000,
               groupId: 0,
               updateTime: 1647832096000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4915,14 +4989,14 @@ window.Hosts = {
               createTime: 1647832099000,
               groupId: 0,
               updateTime: 1647832099000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
               flag: 8194,
               pictureId: "ABUIwOuQDRACGAAgo9jfkQYoq8GX3wUwrAc4jwM",
               summary:
-                "在这里，蟹满堂也要表达感恩之情，为感谢大家一直以来的支持，献上开学季&amp;教师节福利：教师节当日在微信小商城购买",
+                "在这里，🍄仙菇🍄也要表达感恩之情，为感谢大家一直以来的支持，献上开学季&amp;教师节福利：教师节当日在微信小商城购买",
               authMemberLevelId: -1,
               groupIds: "[]",
               authBuddyGroupIdBit: 0,
@@ -4976,7 +5050,7 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 39,
-              title: "蟹满堂 | 线下升级 打造连锁体系",
+              title: "🍄仙菇🍄 | 线下升级 打造连锁体系",
               date: 1630719058000,
               type: "",
               top: 0,
@@ -4985,8 +5059,8 @@ window.Hosts = {
               updateTime: 1651127222000,
               seoKeyword:
                 "正宗大闸蟹，大闸蟹批发，阳澄湖大闸蟹，大闸蟹连锁",
-              seoDesc: "苏州蟹满堂正宗阳澄湖大闸蟹全国连锁专卖店招商加盟",
-              author: "蟹满堂",
+              seoDesc: "苏州🍄仙菇🍄正宗阳澄湖大闸蟹全国连锁专卖店招商加盟",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -4994,7 +5068,7 @@ window.Hosts = {
               browserTitle: "",
               pictureId: "ABUIwOuQDRACGAAgrtjfkQYonIr39wUwqwc4kAM",
               summary:
-                "蟹季快要进入倒计时了大家有没有在自己的城市偶遇我呢蟹满堂跨越城市与你一起迎中秋说起吃蟹，21世纪以来，大闸蟹",
+                "蟹季快要进入倒计时了大家有没有在自己的城市偶遇我呢🍄仙菇🍄跨越城市与你一起迎中秋说起吃蟹，21世纪以来，大闸蟹",
               authMemberLevelId: -1,
               groupIds: "[]",
               cusUrlAddress: "",
@@ -5055,7 +5129,7 @@ window.Hosts = {
               createTime: 1647832115000,
               groupId: 0,
               updateTime: 1647832115000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -5122,7 +5196,7 @@ window.Hosts = {
               createTime: 1647832119000,
               groupId: 0,
               updateTime: 1647832119000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -5182,7 +5256,7 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 42,
-              title: "天涯何处无螃蟹，为何偏要蟹满堂？",
+              title: "天涯何处无螃蟹，为何偏要🍄仙菇🍄？",
               date: 1629421527000,
               type: "",
               top: 0,
@@ -5249,14 +5323,14 @@ window.Hosts = {
             {
               aid: 27538880,
               id: 43,
-              title: "蟹满堂的养殖基地，您见过吗？",
+              title: "🍄仙菇🍄的养殖基地，您见过吗？",
               date: 1628755931000,
               type: "",
               top: 0,
               createTime: 1647832139000,
               groupId: 0,
               updateTime: 1647832139000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -5323,7 +5397,7 @@ window.Hosts = {
               createTime: 1647832148000,
               groupId: 0,
               updateTime: 1647832148000,
-              author: "蟹满堂",
+              author: "🍄仙菇🍄",
               link: "",
               sid: 6,
               views: 0,
@@ -5529,27 +5603,30 @@ window.Hosts = {
         },
       };
 
-      getList(0,8)
-      .then(rows=>rows.list.map(a=>({
-        id: a["enc-keyValue"],
-        title: a.Title,
-        summary:a.Description,
-        picPath:a.NewInfImageURL,
-        newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+a["enc-keyValue"]+"&index="+a.index+"&title="+encodeURIComponent(a.Title),
-        date: 1728635280000
-      })))
-      .then(
-        a=>{
-          newsObj.module.newsList = a;
-          
-          jzModule.Module.activeModule(
-            newsObj
-          );
-          jzSite.lazyLoad.checkLazyLoad($("#module1581"))
-        }
-      ).catch(e=>{
-        console.log(e);
-      });
+      if(document.querySelector("#module1667")!=null){
+        getList(0,8)
+        .then(rows=>rows.list.map(a=>({
+          id: a["enc-keyValue"],
+          title: a.Title,
+          summary:a.Description,
+          picPath:a.NewInfImageURL,
+          newsUrl: assets.newsUrl+"&NewsId="+a["enc-keyValue"]+"&index="+a.index+"&title="+encodeURIComponent(a.Title),
+          date: 1728635280000
+        })))
+        .then(
+          a=>{
+            newsObj.module.newsList = a;
+            
+            jzModule.Module.activeModule(
+              newsObj
+            );
+            jzSite.lazyLoad.checkLazyLoad($("#module1581"))
+          }
+        ).catch(e=>{
+          console.log(e);
+        });
+      }
+      
       
       //#endregion
       jzUtils.run(
@@ -7915,7 +7992,7 @@ window.Hosts = {
     _Global._hiddenMobile = true;
     _Global._hiddenICP = true;
     _Global._hiddenFooterInfo = false;
-    _Global._footerInfoV2 = "©2024 苏州蟹满堂蟹业有限公司 版权所有";
+    _Global._footerInfoV2 = "©2024 苏州🍄仙菇🍄蟹业有限公司 版权所有";
     _Global.isFreeVer = false;
     _Global._hasBeiAn = true;
     _Global._hiddenMps = true;

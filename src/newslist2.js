@@ -1,4 +1,5 @@
 const {getNewsListByTotal:getList,createPagerHtml} = require('./scripts/apirequest.js')
+
 require('./scripts/vue-2.7.14.min.js')
 require('./scripts/comMethods.min.js')
 require('./scripts/jzUtils2.min.js')
@@ -21,8 +22,9 @@ require('./scripts/imageEffect.min.js')
 require('./scripts/index.min.js')
 
 require('./scripts/module_webRightBar.min.js')
+const assets = require('./scripts/assetssetting')
 
-window.contentString=`{"success":true, "msg":"加载成功", "rtInfo" : "{\\"topBar\\":\\"\\\\t<div id='memberBar' class='memberBarV2'>    <div class='memberBarLogin'><a href='javascript:Site.memberLogin();'>请登录<\\\\/a><a href='javascript:Site.memberSignup();'>注册<\\\\/a><a class='otherLoginItem l_Btn' id='t_wxLgn'><span class='memberBarIcon wx_icon'><\\\\/span>微信登录<\\\\/a>    <\\\\/div>    <div class='memberBarArrowRight'><div class='memberBarArrowRightIcon'><\\\\/div><\\\\/div>    <div class='memberBarLinkListContainer'>    <div class='memberBarLinkListWrap'>    \\\\t<div class='memberBarLinkList'><a id='mobiWeb' ><span class='memberBarIcon memberBarIcon_mobi'><\\\\/span>二维码<\\\\/a>\\\\t\\\\t\\\\t\\\\t<div class='mobiWebPanel'>\\\\t\\\\t\\\\t\\\\t\\\\t<img src='${window.qrcodePath}' alt='查看手机网站'>\\\\t\\\\t\\\\t\\\\t\\\\t<div>查看手机网站<\\\\/div>\\\\t\\\\t\\\\t\\\\t<\\\\/div><a id='addBookMark' onclick='Fai.addBookmark(top.document.title, location.origin);'><span class='memberBarIcon memberBarIcon_addBookMark'><\\\\/span>收藏本站<\\\\/a><a id='myProfile' href='/mCenter.jsp'  target='_blank'>我的资料<\\\\/a>    \\\\t<\\\\/div>    \\\\t<\\\\/div>    <\\\\/div>    <div class='memberBarArrowLeft'><div class='memberBarArrowLeftIcon'><\\\\/div><\\\\/div>    <div id='topBarMsg'><\\\\/div>\\\\t<\\\\/div>\x3Cscript type='text/javascript' language='javascript'>Site.initNewWXLogin('[{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"姓名\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":true,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false},{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"email\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"邮箱\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":false,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false},{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"mobile\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"手机\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":true,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false}]', true,200, 't_wxLgn','{\\\\\\"skipUrl\\\\\\":\\\\\\"/index.jsp\\\\\\",\\\\\\"isPhotoGroup\\\\\\":false}');\\\\nSite.loginSiteInit('xp25623701', 'fkw.com', false, '');\\\\n<\\\\/script>\\",\\"visitorCounter\\":\\"<div class='visitorCounterPosition'><table><tr><td align='center'><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><\\\\/td><\\\\/tr><\\\\/table><\\\\/div>\\",\\"webRightBar\\":{\\"rightBarOpen\\":true,\\"Logined\\":false,\\"mallMember\\":true,\\"choiceCurrencyVal\\":\\"￥\\",\\"memberInfo_out\\":\\"{\\\\\\"preImgPath\\\\\\":\\\\\\"//0.ss.508sys.com/image/tx3.png\\\\\\",\\\\\\"imgPath\\\\\\":\\\\\\"//0.ss.508sys.com/image/tx3.png\\\\\\",\\\\\\"imgStyle\\\\\\":\\\\\\"\\\\\\"}\\",\\"resPath\\":\\"//1.ss.508sys.com/js/dist/libs/module_webRightBar.min.js?v=202408051114\\"},\\"moduleDomList\\":[]}", "memberInfo" : "{}"}`;
+window.contentString=`{"success":true, "msg":"加载成功", "rtInfo" : "{\\"topBar\\":\\"\\\\t<div id='memberBar' class='memberBarV2'>    <div class='memberBarLogin'><a href='javascript:Site.memberLogin();'>请登录<\\\\/a><a href='javascript:Site.memberSignup();'>注册<\\\\/a><a class='otherLoginItem l_Btn' id='t_wxLgn'><span class='memberBarIcon wx_icon'><\\\\/span>微信登录<\\\\/a>    <\\\\/div>    <div class='memberBarArrowRight'><div class='memberBarArrowRightIcon'><\\\\/div><\\\\/div>    <div class='memberBarLinkListContainer'>    <div class='memberBarLinkListWrap'>    \\\\t<div class='memberBarLinkList'><a id='mobiWeb' ><span class='memberBarIcon memberBarIcon_mobi'><\\\\/span>二维码<\\\\/a>\\\\t\\\\t\\\\t\\\\t<div class='mobiWebPanel'>\\\\t\\\\t\\\\t\\\\t\\\\t<img src='${assets.qrCodeUrl}' alt='查看手机网站'>\\\\t\\\\t\\\\t\\\\t\\\\t<div>查看手机网站<\\\\/div>\\\\t\\\\t\\\\t\\\\t<\\\\/div><a id='addBookMark' onclick='Fai.addBookmark(top.document.title, location.origin);'><span class='memberBarIcon memberBarIcon_addBookMark'><\\\\/span>收藏本站<\\\\/a><a id='myProfile' href='/mCenter.jsp'  target='_blank'>我的资料<\\\\/a>    \\\\t<\\\\/div>    \\\\t<\\\\/div>    <\\\\/div>    <div class='memberBarArrowLeft'><div class='memberBarArrowLeftIcon'><\\\\/div><\\\\/div>    <div id='topBarMsg'><\\\\/div>\\\\t<\\\\/div>\x3Cscript type='text/javascript' language='javascript'>Site.initNewWXLogin('[{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"姓名\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":true,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false},{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"email\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"邮箱\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":false,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false},{\\\\\\\\\\\\\\"fieldKey\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"mobile\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"手机\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"placeholder\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"must\\\\\\\\\\\\\\":true,\\\\\\\\\\\\\\"type\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\"propContent\\\\\\\\\\\\\\":\\\\\\\\\\\\\\"\\\\\\\\\\\\\\",\\\\\\\\\\\\\\"otherLoginMust\\\\\\\\\\\\\\":false}]', true,200, 't_wxLgn','{\\\\\\"skipUrl\\\\\\":\\\\\\"/index.jsp\\\\\\",\\\\\\"isPhotoGroup\\\\\\":false}');\\\\nSite.loginSiteInit('xp25623701', 'fkw.com', false, '');\\\\n<\\\\/script>\\",\\"visitorCounter\\":\\"<div class='visitorCounterPosition'><table><tr><td align='center'><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><div class='visitorCounterBg visitorCounter_cp_0'><\\\\/div><\\\\/td><\\\\/tr><\\\\/table><\\\\/div>\\",\\"webRightBar\\":{\\"rightBarOpen\\":true,\\"Logined\\":false,\\"mallMember\\":true,\\"choiceCurrencyVal\\":\\"￥\\",\\"memberInfo_out\\":\\"{\\\\\\"preImgPath\\\\\\":\\\\\\"//0.ss.508sys.com/image/tx3.png\\\\\\",\\\\\\"imgPath\\\\\\":\\\\\\"//0.ss.508sys.com/image/tx3.png\\\\\\",\\\\\\"imgStyle\\\\\\":\\\\\\"\\\\\\"}\\",\\"resPath\\":\\"//1.ss.508sys.com/js/dist/libs/module_webRightBar.min.js?v=202408051114\\"},\\"moduleDomList\\":[]}", "memberInfo" : "{}"}`;
 window.Hosts = {
     "portal": "i.fkw.com",
     "home": "www.fkw.com",
@@ -1756,7 +1758,7 @@ try {
                     "createTime": 1647831195000,
                     "groupId": 0,
                     "updateTime": 1647831195000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -1820,7 +1822,7 @@ try {
                     "createTime": 1647831208000,
                     "groupId": 0,
                     "updateTime": 1647831208000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -1884,7 +1886,7 @@ try {
                     "createTime": 1647831218000,
                     "groupId": 0,
                     "updateTime": 1647831218000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -1948,7 +1950,7 @@ try {
                     "createTime": 1647831221000,
                     "groupId": 0,
                     "updateTime": 1647831221000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -2012,7 +2014,7 @@ try {
                     "createTime": 1647831231000,
                     "groupId": 0,
                     "updateTime": 1647831232000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -2133,7 +2135,7 @@ try {
                 }, {
                     "aid": 27538880,
                     "id": 17,
-                    "title": "诚邀合作伙伴 | 大闸蟹蟹季悄然临近，蟹满堂邀请各方伙伴携手共进",
+                    "title": "诚邀合作伙伴 | 大闸蟹蟹季悄然临近，🍄仙菇🍄邀请各方伙伴携手共进",
                     "date": 1625619795000,
                     "type": "",
                     "top": 0,
@@ -2146,7 +2148,7 @@ try {
                     "views": 0,
                     "flag": 8194,
                     "pictureId": "ABUIwOuQDRACGAAgzNHfkQYojfv0mAMwrAc4kAM",
-                    "summary": "2021年已过半，距蟹季也仅剩3个月时间，蟹满堂合伙人招募计划限时火热进行中，不仅超多扶持，还能限时免费加盟！",
+                    "summary": "2021年已过半，距蟹季也仅剩3个月时间，🍄仙菇🍄合伙人招募计划限时火热进行中，不仅超多扶持，还能限时免费加盟！",
                     "authMemberLevelId": -1,
                     "groupIds": "[]",
                     "authBuddyGroupIdBit": 0,
@@ -2197,14 +2199,14 @@ try {
                 }, {
                     "aid": 27538880,
                     "id": 18,
-                    "title": "献礼百年·红色传\u201C澄\u201D|蟹满堂创业之路与党同行！",
+                    "title": "献礼百年·红色传\u201C澄\u201D|🍄仙菇🍄创业之路与党同行！",
                     "date": 1625046359000,
                     "type": "",
                     "top": 0,
                     "createTime": 1647831250000,
                     "groupId": 0,
                     "updateTime": 1647831250000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
@@ -2261,20 +2263,20 @@ try {
                 }, {
                     "aid": 27538880,
                     "id": 19,
-                    "title": "招募城市合伙人|六月加盟忙，蟹满堂十城十二店启动",
+                    "title": "招募城市合伙人|六月加盟忙，🍄仙菇🍄十城十二店启动",
                     "date": 1624355163000,
                     "type": "",
                     "top": 0,
                     "createTime": 1647831259000,
                     "groupId": 0,
                     "updateTime": 1647831259000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "",
                     "sid": 6,
                     "views": 0,
                     "flag": 8194,
                     "pictureId": "ABUIwOuQDRACGAAg29HfkQYosqDm5AYwuAg4ywM",
-                    "summary": "如果你也想要一份属于自己的事业，却找不到平台，那就加入我们。我们蟹满堂可以为你提供创业的平台，目前我们有近百家阳澄湖大闸蟹城市专卖店，广泛覆盖全国大中型城市。",
+                    "summary": "如果你也想要一份属于自己的事业，却找不到平台，那就加入我们。我们🍄仙菇🍄可以为你提供创业的平台，目前我们有近百家阳澄湖大闸蟹城市专卖店，广泛覆盖全国大中型城市。",
                     "authMemberLevelId": -1,
                     "groupIds": "[]",
                     "authBuddyGroupIdBit": 0,
@@ -2332,13 +2334,13 @@ try {
                     "createTime": 1647831269000,
                     "groupId": 0,
                     "updateTime": 1647831270000,
-                    "author": "蟹满堂",
+                    "author": "🍄仙菇🍄",
                     "link": "https://mall.jd.com/index-10902446.html?from=pc",
                     "sid": 6,
                     "views": 0,
                     "flag": 8194,
                     "pictureId": "ABUIwOuQDRACGAAg5dHfkQYoyoHQiAMw6Ac4qQM",
-                    "summary": "\u200B上京东，搜索蟹满堂<br/>六月黄尝鲜价钜惠来袭<br/>活动时间：6月16日-18日",
+                    "summary": "\u200B上京东，搜索🍄仙菇🍄<br/>六月黄尝鲜价钜惠来袭<br/>活动时间：6月16日-18日",
                     "authMemberLevelId": -1,
                     "groupIds": "[]",
                     "authBuddyGroupIdBit": 0,
@@ -2552,7 +2554,7 @@ try {
                     title: b.Title,
                     summary:b.Description,
                     picPath:b.NewInfImageURL,
-                    newsUrl: "/Home?DashboardID=205141&release=false&NewsId="+b["enc-keyValue"]+"&index="+b.index+"&title="+encodeURIComponent(b.Title),
+                    newsUrl: assets.newsUrl+"&NewsId="+b["enc-keyValue"]+"&index="+b.index+"&title="+encodeURIComponent(b.Title),
                     date: 1728635280000
                 }));
                 var totalPage = parseInt(a.total/10)+(a.total%10==0?0:1);
@@ -4913,7 +4915,7 @@ try {
     _Global._hiddenMobile = true;
     _Global._hiddenICP = true;
     _Global._hiddenFooterInfo = false;
-    _Global._footerInfoV2 = "©2024 苏州蟹满堂蟹业有限公司 版权所有";
+    _Global._footerInfoV2 = "©2024 苏州🍄仙菇🍄蟹业有限公司 版权所有";
     _Global.isFreeVer = false;
     _Global._hasBeiAn = true;
     _Global._hiddenMps = true;

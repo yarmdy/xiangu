@@ -58,7 +58,7 @@
                                 二维码
                             </a>
                             <div class='mobiWebPanel'>
-                                <img src='./assets/img/qrCode.png' alt='查看手机网站'>
+                                <img src='@{{qrCodeUrl}}' alt='查看手机网站'>
                                 <div>查看手机网站</div>
                             </div>
                             <a id='addBookMark' onclick='Fai.addBookmark(top.document.title, location.origin);'>
@@ -120,11 +120,11 @@
                                         <div id='navCenter' class='navCenter'>
                                             <div class='itemPrev'></div>
                                             <div class='itemContainer'>
-                                                <div title='' id='nav2' class='item itemCol2 itemIndex1' colId='2' onclick='window.open("/", "_self")' _jump='window.open("/", "_self")'>
+                                                <div title='' id='nav2' class='item itemCol2 itemIndex1' colId='2' onclick='window.open("@{{homeUrl}}", "_self")' _jump='window.open("@{{homeUrl}}", "_self")'>
                                                     <div class='itemCenter navItem'>
-                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='/' onclick=';return false;'>
+                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='@{{homeUrl}}' onclick=';return false;'>
                                                             <div class='nav_item_wrapper'>
-                                                                <span class='itemName0 J_nav_item_name'>新闻资讯</span>
+                                                                <span class='itemName0 J_nav_item_name'>首页</span>
                                                                 <span style='display:none;' class='navItemSubName J_nav_item_subname'>Home</span>
                                                             </div>
                                                             <div class='nav_item_arrow J_nav_item_arrow hide nav_item_arrow_hollow_triangle' data-pack-modules-len='0'></div>
@@ -190,11 +190,11 @@
                                                 <div class='itemSep'>
                                                     <span class='itemSepLine'></span>
                                                 </div>
-                                                <div title='' id='nav105' class='item itemCol105 itemIndex6' colId='105' onclick='window.open("/col.jsp?id=105", "_self")' _jump='window.open("/col.jsp?id=105", "_self")'>
+                                                <div title='' id='nav105' class='item itemCol105 itemIndex6' colId='105' onclick='window.open("@{{aboutUrl}}", "_self")' _jump='window.open("@{{aboutUrl}}", "_self")'>
                                                     <div class='itemCenter navItem'>
-                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='/col.jsp?id=105' onclick=';return false;'>
+                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='@{{aboutUrl}}' onclick=';return false;'>
                                                             <div class='nav_item_wrapper'>
-                                                                <span class='itemName0 J_nav_item_name'>关于蟹满堂</span>
+                                                                <span class='itemName0 J_nav_item_name'>关于我们</span>
                                                                 <span style='display:none;' class='navItemSubName J_nav_item_subname'>Nav</span>
                                                             </div>
                                                             <div class='nav_item_arrow J_nav_item_arrow hide nav_item_arrow_hollow_triangle' data-pack-modules-len='0'></div>
@@ -218,9 +218,9 @@
                                                 <div class='itemSep'>
                                                     <span class='itemSepLine'></span>
                                                 </div>
-                                                <div title='' id='nav102' class='item itemCol102 itemIndex8' colId='102' onclick='window.open("/col.jsp?id=102", "_self")' _jump='window.open("/col.jsp?id=102", "_self")'>
+                                                <div title='' id='nav102' class='item itemCol102 itemIndex8' colId='102' onclick='window.open("@{{newslistUrl}}", "_self")' _jump='window.open("@{{newslistUrl}}", "_self")'>
                                                     <div class='itemCenter navItem'>
-                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='/col.jsp?id=102' onclick=';return false;'>
+                                                        <a hidefocus='true' style='outline:none;' class='J_nav_item_link  ' href='@{{newslistUrl}}' onclick=';return false;'>
                                                             <div class='nav_item_wrapper'>
                                                                 <span class='itemName0 J_nav_item_name'>新闻资讯</span>
                                                                 <span style='display:none;' class='navItemSubName J_nav_item_subname'>Nav</span>
@@ -307,7 +307,7 @@
                                                                         <h1 class='title'>以匠心致初心，礼赞祖国华诞</h1>
                                                                         <div class='newsInfoWrap'>
                                                                             <div class='leftInfo'>
-                                                                                <span class='newsInfo newsInfo_author'>作者：蟹满堂</span>
+                                                                                <span class='newsInfo newsInfo_author'>作者：🍄仙菇🍄</span>
                                                                             </div>
                                                                         </div>
                                                                         <div class='line1'></div>
@@ -338,7 +338,7 @@
                                                                                         </section>
                                                                                         <section style="background: #810909;height: 45px;padding: 0 6px;display: flex;align-items: center;" data-mid="">
                                                                                             <section data-mid="" style="height: 40px;background-image: url(&quot;https://mmbiz.qpic.cn/mmbiz_png/oYBRmmRDQ94DNq1uhqWO11kYvTBUE66hcYb7EMXeYYOVgibR7fnXWr6102F5vlicWF6AYDPsZBr2r931m7bnl2Vg/640&quot;);background-repeat: no-repeat;background-size: 100% 100%;font-size: 16px;font-weight: 600;color: #721010;line-height: 23px;display: flex;justify-content: center;align-items: center;flex-wrap: nowrap;padding: 0 16px;">
-                                                                                                <p data-mid="">蟹满堂大闸蟹 致谢全国</p>
+                                                                                                <p data-mid="">🍄仙菇🍄大闸蟹 致谢全国</p>
                                                                                             </section>
                                                                                         </section>
                                                                                         <section style="width: 16px;height: auto;background: none;" data-mid="">
@@ -355,7 +355,7 @@
                                                                                         <section style="width: 100%;background: #810909;padding: 5px;display: flex;justify-content: center;align-items: center;" data-mid="">
                                                                                             <section data-mid="" style="width: 100%;background-image: url(&quot;https://mmbiz.qpic.cn/mmbiz_png/VjkOokyP7wAEUNZiclmZJCibvWB9MEbcE4SuAvcf3o1fiaXJcQIlsQeAhaoYoNB3CcVSzSyEvRMz02BjdZAneOYSg/640&quot;);background-repeat: no-repeat;background-size: 100% 100%;padding: 15px 18px;font-size: 14px;color: #721010;line-height: 20px;">
                                                                                                 <p>
-                                                                                                    <a class="weapp_image_link js_weapp_entry" data-miniprogram-appid="wxb6d2849f9b5db6c4" data-miniprogram-path="pages/cusCol/cusCol" data-miniprogram-nickname="蟹满堂官方商城" href="" data-miniprogram-type="image" data-miniprogram-servicetype="">
+                                                                                                    <a class="weapp_image_link js_weapp_entry" data-miniprogram-appid="wxb6d2849f9b5db6c4" data-miniprogram-path="pages/cusCol/cusCol" data-miniprogram-nickname="🍄仙菇🍄官方商城" href="" data-miniprogram-type="image" data-miniprogram-servicetype="">
                                                                                                         <img class="rich_pages wxw-img" data-ratio="1.1284271284271283" data-s="300,640" src="//27538880.s21i.faiusr.com/4/3/ABUIwOuQDRAEGAAg-9ffkQYo0rC7vgcwtQU4jgY.png" data-type="png" data-w="693" style="" alt=" ">
                                                                                                     </a>
                                                                                                 </p>
@@ -402,7 +402,7 @@
                                                                                                     <br>
                                                                                                 </p>
                                                                                                 <p>
-                                                                                                    <span style="font-size: 12px;color: rgb(136, 136, 136);">蟹满堂官方推荐最佳品蟹时间</span>
+                                                                                                    <span style="font-size: 12px;color: rgb(136, 136, 136);">🍄仙菇🍄官方推荐最佳品蟹时间</span>
                                                                                                 </p>
                                                                                                 <section style="width: 100%;padding: 14px 16px 26px;border-width: 2px;border-style: solid;border-color: rgb(197, 46, 46);font-size: 14px;color: rgb(114, 16, 16);line-height: 20px;" data-mid="">
                                                                                                     <p data-mid="">
@@ -525,7 +525,7 @@
                                                                                                 <section data-mid="">
                                                                                                     <p>国庆佳节即将到来，团圆相聚的喜悦心情以餐桌仪式感作为最妥帖的表达。亲朋相聚、走亲访友，馈赠佳礼只需一份蟹足矣，送的不仅仅是一份心意，更是一份情谊。</p>
                                                                                                     <p>大闸蟹最佳赏味时期只有短短3个月，过了还要等1年！喜欢吃蟹的蟹粉们不要错过了！</p>
-                                                                                                    <p>蟹满堂正宗阳澄湖大闸蟹，历经层层筛选，个个分量十足，每一只都个大膘肥、黄满膏腻，并且鲜活值满分！十四年坚守品质，以匠心致初心，有颜有味，用来送礼、聚餐都很适合！</p>
+                                                                                                    <p>🍄仙菇🍄正宗阳澄湖大闸蟹，历经层层筛选，个个分量十足，每一只都个大膘肥、黄满膏腻，并且鲜活值满分！十四年坚守品质，以匠心致初心，有颜有味，用来送礼、聚餐都很适合！</p>
                                                                                                 </section>
                                                                                             </section>
                                                                                             <section style="width: 100%;display: flex;justify-content: flex-end;align-items: flex-start;" data-mid="">
@@ -563,7 +563,7 @@
                                                                                         </section>
                                                                                         <section style="width: 100%;border-width: 2px;border-style: solid;border-color: rgb(255, 235, 166);display: flex;justify-content: flex-start;align-items: center;flex-direction: column;padding: 10px 7px;" data-mid="">
                                                                                             <p>
-                                                                                                <a class="weapp_image_link js_weapp_entry" data-miniprogram-appid="wxb6d2849f9b5db6c4" data-miniprogram-path="pages/cusCol/cusCol" data-miniprogram-nickname="蟹满堂官方商城" href="" data-miniprogram-type="image" data-miniprogram-servicetype="">
+                                                                                                <a class="weapp_image_link js_weapp_entry" data-miniprogram-appid="wxb6d2849f9b5db6c4" data-miniprogram-path="pages/cusCol/cusCol" data-miniprogram-nickname="🍄仙菇🍄官方商城" href="" data-miniprogram-type="image" data-miniprogram-servicetype="">
                                                                                                     <img class="rich_pages wxw-img" data-ratio="1.7777777777777777" data-s="300,640" src="//27538880.s21i.faiusr.com/2/3/ABUIwOuQDRACGAAghdjfkQYo9pvT3AQwuAg4gA8.jpg" data-type="jpeg" data-w="1080" style="" alt=" ">
                                                                                                 </a>
                                                                                             </p>
@@ -608,7 +608,7 @@
                                                                                 <div id='newsPagenation12' class='newsPagenation'>
                                                                                     <div class='pagenationV2'>
                                                                                         <span class='pageTag'>上一篇</span>
-                                                                                        <a hidefocus='true' href='/nd.jsp?id=33#fai_12_top&_np=2_0' onclick='Fai.top.JZ.setUrlArgToCookie(this, {}); return false;'>蟹满堂|一湖好水，奢养一品好蟹</a>
+                                                                                        <a hidefocus='true' href='/nd.jsp?id=33#fai_12_top&_np=2_0' onclick='Fai.top.JZ.setUrlArgToCookie(this, {}); return false;'>🍄仙菇🍄|一湖好水，奢养一品好蟹</a>
                                                                                     </div>
                                                                                     <div class='pagenationV2'>
                                                                                         <span class='pageTag'>下一篇</span>
@@ -619,7 +619,7 @@
                                                                             <div class='shareInfo'>
                                                                                 <span class='shareTag'>分享到：</span>
                                                                                 <div class='shareListPanel'>
-                                                                                    <a class='shareIcon Weixin' hidefocus='true' title='分享到 微信' href='javascript:;' onclick="Site.wxShareAlter(window.qrcodePath, true);return false;"></a>
+                                                                                    <a class='shareIcon Weixin' hidefocus='true' title='分享到 微信' href='javascript:;' onclick="Site.wxShareAlter('@{{qrCodeUrl}}', true);return false;"></a>
                                                                                     <a class='shareIcon sina_weibo' hidefocus='true' title='分享到 新浪微博' href='javascript:;' onclick='window.open("http://service.weibo.com/share/share.php?title=%E3%80%90%E4%BB%A5%E5%8C%A0%E5%BF%83%E8%87%B4%E5%88%9D%E5%BF%83%EF%BC%8C%E7%A4%BC%E8%B5%9E%E7%A5%96%E5%9B%BD%E5%8D%8E%E8%AF%9E+-+%E8%9F%B9%E6%BB%A1%E5%A0%82%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9-%E5%85%A8%E5%9B%BD%E8%BF%9E%E9%94%81%E5%93%81%E7%89%8C%E3%80%91&url=https%3A%2F%2Fwww.ychxmt.com%2Fnd.jsp%3F_sc%3D2%26id%3D32")'></a>
                                                                                     <a class='shareIcon qq_zone' hidefocus='true' title='分享到 QQ空间' href='javascript:;' onclick='window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary=https%3A%2F%2Fwww.ychxmt.com%2Fnd.jsp%3F_sc%3D2%26id%3D32&url=https%3A%2F%2Fwww.ychxmt.com%2Fnd.jsp%3F_sc%3D2%26id%3D32&pics=http%3A//27538880.s21i.faiusr.com/2/3/ABUIwOuQDRACGAAghtjfkQYovJXClwMwrAc4jwM.jpg&title=%E3%80%90%E4%BB%A5%E5%8C%A0%E5%BF%83%E8%87%B4%E5%88%9D%E5%BF%83%EF%BC%8C%E7%A4%BC%E8%B5%9E%E7%A5%96%E5%9B%BD%E5%8D%8E%E8%AF%9E+-+%E8%9F%B9%E6%BB%A1%E5%A0%82%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9-%E5%85%A8%E5%9B%BD%E8%BF%9E%E9%94%81%E5%93%81%E7%89%8C%E3%80%91")'></a>
                                                                                     <a class='shareIcon douban' hidefocus='true' title='分享到 豆瓣网' href='javascript:;' onclick='window.open("http://shuo.douban.com/!service/share?name=%E3%80%90%E4%BB%A5%E5%8C%A0%E5%BF%83%E8%87%B4%E5%88%9D%E5%BF%83%EF%BC%8C%E7%A4%BC%E8%B5%9E%E7%A5%96%E5%9B%BD%E5%8D%8E%E8%AF%9E+-+%E8%9F%B9%E6%BB%A1%E5%A0%82%E9%98%B3%E6%BE%84%E6%B9%96%E5%A4%A7%E9%97%B8%E8%9F%B9-%E5%85%A8%E5%9B%BD%E8%BF%9E%E9%94%81%E5%93%81%E7%89%8C%E3%80%91https%3A%2F%2Fwww.ychxmt.com%2Fnd.jsp%3F_sc%3D2%26id%3D32&text=https%3A%2F%2Fwww.ychxmt.com%2Fnd.jsp%3F_sc%3D2%26id%3D32&image=http%3A//27538880.s21i.faiusr.com/2/3/ABUIwOuQDRACGAAghtjfkQYovJXClwMwrAc4jwM.jpg")'></a>
@@ -693,7 +693,7 @@
                                                 <span>苏ICP备16041886号</span>
                                             </a>
                                         </div>
-                                        <div class='footerInfo footerInfoV2 J_footerInfo'>©2024 苏州蟹满堂蟹业有限公司 版权所有</div>
+                                        <div class='footerInfo footerInfoV2 J_footerInfo'>©2024 苏州🍄仙菇🍄蟹业有限公司 版权所有</div>
                                         <div class='footerSupport' id='footerSupport' style='display:none;'>
                                             <span class='footerBeian J_supportItem' style='display:none;'>
                                                 <a hidefocus='true' href='https://beian.miit.gov.cn' target='_blank' rel='nofollow'>苏ICP备16041886号-1</a>
@@ -794,7 +794,7 @@
                             <div class='formMiddleContent formMiddleContent311 fk-formContentOtherPadding' tabStyle='0'>
                                 <div class='shareInfo'>
                                     <div class='shareCtrl shareNotTitlePanel shareMt'>
-                                        <a class='shareLink' hidefocus='true' title='分享到 微信' href='javascript:void(0);' onclick="Site.wxShareAlter(window.qrcodePath);return false;">
+                                        <a class='shareLink' hidefocus='true' title='分享到 微信' href='javascript:void(0);' onclick="Site.wxShareAlter('@{{qrCodeUrl}}');return false;">
                                             <div class='shareIcon Weixin'></div>
                                             <div class='shareCtrl shareName'>微信</div>
                                         </a>
@@ -896,7 +896,7 @@
                             <div class='fk-rbar-mobiItem-logo icon_font faisco-icons-qrcode2 J_fk-rb-icon-mobiWeb' id='rbarMobiIcon'></div>
                             <div class='qrCodeImgPanel' id='qrImgPanel' style='display:none'>
                                 <div class='qrCodeViewPanel'>
-                                    <img alt=' ' title='查看手机网站' src='./assets/img/qrCode.png'>
+                                    <img alt=' ' title='查看手机网站' src='@{{qrCodeUrl}}'>
                                 </div>
                                 <div class='qrCodeTip'>查看手机网站</div>
                                 <div class='fk-qr-triangle'>◆</div>
@@ -2677,7 +2677,7 @@
                 _Global._hiddenMobile = true;
                 _Global._hiddenICP = true;
                 _Global._hiddenFooterInfo = false;
-                _Global._footerInfoV2 = "©2024 苏州蟹满堂蟹业有限公司 版权所有";
+                _Global._footerInfoV2 = "©2024 苏州🍄仙菇🍄蟹业有限公司 版权所有";
                 _Global.isFreeVer = false;
                 _Global._hasBeiAn = true;
                 _Global._hiddenMps = true;

@@ -1,20 +1,15 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-const lodash = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { title } = require('process');
-const { fileURLToPath } = require('url');  // 用于将 url 转换为路径
 const {PurgeCSSPlugin} = require('purgecss-webpack-plugin');
 
 //const {IgnorePlugin} = require('webpack');
 
-const {glob} = require('glob');
 
 //const __filename = fileURLToPath(import.meta.url);  // 获取当前文件路径
-//const __dirname = dirname(__filename);  // 获取当前文件的目录
-const paths = {src:path.join(__dirname,"src")}
+//const __dirname = dirname(__filename);  // 获取当前文件的
 
 
 const isProduction = process.env.NODE_ENV == 'production';

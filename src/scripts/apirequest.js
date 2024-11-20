@@ -1,3 +1,4 @@
+const assets = require('./assetssetting')
 const ins = {
     getNewsList(offset,limit){
         return fetch(`/api?APICommand=Fungus_Get_NewInfContent&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b&SelectMaxRecords=${limit}&StartRecordCount=${offset}`)
@@ -64,6 +65,37 @@ const ins = {
         html.push(`</span>`);
         html.push(`</div>`);
         return html.join("");
+    },
+    getLastNextNews(index){
+        return ins.getNewsList(index==0?0:index-1,index==0?2:3).then(a=>{
+            if(index==0){
+                a.unshift(undefined);
+            }
+            var last = a[0];
+            var next = a[2];
+
+            last=last?`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+last["enc-keyValue"]+"&index="+last.index+"&title="+encodeURIComponent(last.Title))}'  >${last.Title}</a>`:"-";
+            next=next?`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+next["enc-keyValue"]+"&index="+next.index+"&title="+encodeURIComponent(next.Title))}'  >${next.Title}</a>`:"-";
+            const result = `<div id='newsPagenation12' class='newsPagenation' style='display:block;'>
+<div class='pagenationV2'><span class='pageTag'>上一篇</span>${last}</div>
+<div class='pagenationV2'><span class='pageTag'>下一篇</span>${next}</div>
+</div>`
+            return result;
+        });
+    },
+    getQuery(url,name){
+        var reg = new RegExp(`(?<=[?&])(?:${name})=(\\S*?)(?=[&#]|$)`,"i");
+        var match = url.match(reg);
+        if(!match) return undefined;
+        var res = match[1];
+        if(!res) return undefined;
+        return decodeURIComponent(res);
+    },
+    getNewsDetail(id){
+        return fetch(`/api?APICommand=Fungus_Get_NewInfContent_Details&APIToken=a6d8afcf6b4ad4da34cbe05d501b5a3b&Parameters=F:KeyValue~V:{id}~O:E`)
+        .then(a=>a.json())
+        .then(a=>a.Export.Table.Row.map(b=>b["View Link_DBValue"].split("|")[2]))
+        .catch(a=>[]);
     }
 };
 module.exports = ins;
