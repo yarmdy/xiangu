@@ -73,12 +73,13 @@ const ins = {
             }
             var last = a[0];
             var next = a[2];
-
-            last=last?`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+last["enc-keyValue"]+"&index="+last.index+"&title="+encodeURIComponent(last.Title))}'  >${last.Title}</a>`:"-";
-            next=next?`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+next["enc-keyValue"]+"&index="+next.index+"&title="+encodeURIComponent(next.Title))}'  >${next.Title}</a>`:"-";
+            var lastHide="";
+            var nextHide="";
+            last=last?(`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+last["enc-keyValue"]+"&index="+last.index+"&title="+encodeURIComponent(last.Title))}'  >${last.Title}</a>`):(lastHide=" style='visibility: hidden;'","-");
+            next=next?(`<a hidefocus='true' href='${(assets.newsUrl+"&NewsId="+next["enc-keyValue"]+"&index="+next.index+"&title="+encodeURIComponent(next.Title))}'  >${next.Title}</a>`):(nextHide=" style='visibility: hidden;'","-");
             const result = `<div id='newsPagenation12' class='newsPagenation' style='display:block;'>
-<div class='pagenationV2'><span class='pageTag'>上一篇</span>${last}</div>
-<div class='pagenationV2'><span class='pageTag'>下一篇</span>${next}</div>
+<div class='pagenationV2'${lastHide}><span class='pageTag'>上一篇</span>${last}</div>
+<div class='pagenationV2'${nextHide}><span class='pageTag'>下一篇</span>${next}</div>
 </div>`
             return result;
         });
