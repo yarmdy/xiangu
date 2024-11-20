@@ -7,7 +7,7 @@ module.exports = function(source){
         case '.html':
             source = processHtml(source);
             break;
-        case '.html':
+        case '.css':
             source = processCss(source);
             break;
     }

@@ -19,7 +19,9 @@ require('./scripts/imageEffect.min.js')
 
 require('./scripts/index.min.js')
 
-require('./scripts/module_webRightBar.min.js')
+const asserts = require('./scripts/assetssetting.js')
+
+// require('./scripts/module_webRightBar.min.js')
 
 
 window.Hosts = {
@@ -909,9 +911,9 @@ try {
                 "imgWidth": 1920,
                 "imgHeight": 973,
                 "ot": 0,
-                "i": "ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc",
+                "i": asserts.aboutbannerUrl.substring(asserts.aboutbannerUrl.lastIndexOf("/")),
                 "st": 0,
-                "src": "//27538880.s21i.faiusr.com/2/3/ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc.jpg.webp"
+                "src": asserts.aboutbannerUrl
             }],
             "width": 1920,
             "cusBannerWidth": 0,
@@ -6153,13 +6155,13 @@ try {
     window._pageBannerV2Data = {
         "bl": [{
             "t": 1,
-            "i": "ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc",
+            "i": asserts.aboutbannerUrl.substring(asserts.aboutbannerUrl.lastIndexOf("/")),
             "ot": 0,
-            "p": "//27538880.s21i.faiusr.com/2/3/ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc.jpg",
+            "p": asserts.aboutbannerUrl,
             "w": 1920,
             "h": 973,
-            "tp": "//27538880.s21i.faiusr.com/2/3/ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc!100x100.jpg",
-            "du": "//download.s21i.faiusr.com/27538880/0/3/ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc.jpg?f=ABUIABACGAAg0_P0kgYo0N-92QYwgA84zQc.jpg&v=",
+            "tp": asserts.aboutbannerUrl,
+            "du": asserts.aboutbannerUrl,
             "e": 0,
             "u": ""
         }],

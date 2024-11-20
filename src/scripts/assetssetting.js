@@ -16,6 +16,24 @@ if(isProduction){
         aboutUrl:"/about.html",
         newslistUrl:"/newslist.html",
         newsUrl:"/news.html?t=0",
+        logoUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        phoneUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        rongyuUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        zhudabtUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        jiagemUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        youshi1Url:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        youshi2Url:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        youshi3Url:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        youshi4Url:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        newsbtUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        copyright:"©🍄仙菇🍄",
+        beitxt:"ICP备xxx号",
+        aboutbannerUrl:"//cdn.infrontsmart.com/FungusTest/S3Images/eaa6d9aa944e91517aba26909cde2a1e.png",
+        aboutusContent:"简介关于我们",
+        shiliHtml:`<div class="fk-editor simpleText fk-editor-break-word  "><span style="color: rgb(255, 255, 255);"><span style="font-family: fontface__阿里巴巴普惠体-Regular__34__113308617420;"><span style="font-size: 18px; line-height: 27px;">01.。</span></span></span><div><span style="color: rgb(255, 255, 255);"><span style="font-family: fontface__阿里巴巴普惠体-Regular__34__113308617420;"><span style="font-size: 18px; line-height: 27px;"><br></span></span></span></div><div><span style="color: rgb(255, 255, 255);"><span style="font-family: fontface__阿里巴巴普惠体-Regular__34__113308617420;"><span style="font-size: 18px; line-height: 27px;">02.。</span></span></span></div><div><span style="color: rgb(255, 255, 255);"><span style="font-family: fontface__阿里巴巴普惠体-Regular__34__113308617420;"><span style="font-size: 18px; line-height: 27px;"><br></span></span></span></div><div><span style="color: rgb(255, 255, 255);"><span style="font-family: fontface__阿里巴巴普惠体-Regular__34__113308617420;"><span style="font-size: 18px; line-height: 27px;">03.。</span></span></span></div></div>`,
+        lianxipicUrl:"//cdn.infrontsmart.com/GlobalDocs/701254.png",
+        newslistDesc:"这里是咨询简介",
+        newsAuthor:"🍄仙菇🍄"
     };
 }
 

@@ -22,7 +22,7 @@ require('./scripts/imageEffect.min.js')
 
 require('./scripts/index.min.js')
 
-require('./scripts/module_webRightBar.min.js')
+// require('./scripts/module_webRightBar.min.js')
 
 
 
@@ -942,22 +942,22 @@ window.Hosts = {
       }
 
       //Site.showOrHideMailBox();
-      Site.initNewWXLogin(
-        '[{"fieldKey":"name","name":"姓名","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"email","name":"邮箱","placeholder":"","must":false,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"mobile","name":"手机","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false}]',
-        true,
-        200,
-        "t_wxLgn",
-        '{"skipUrl":"/index.jsp","isPhotoGroup":false}'
-      );
+      // Site.initNewWXLogin(
+      //   '[{"fieldKey":"name","name":"姓名","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"email","name":"邮箱","placeholder":"","must":false,"type":0,"propContent":"","otherLoginMust":false},{"fieldKey":"mobile","name":"手机","placeholder":"","must":true,"type":0,"propContent":"","otherLoginMust":false}]',
+      //   true,
+      //   200,
+      //   "t_wxLgn",
+      //   '{"skipUrl":"/index.jsp","isPhotoGroup":false}'
+      // );
 
-      Site.loadLastLoginAcct("xp25623701");
+      //Site.loadLastLoginAcct("xp25623701");
 
       //Site.bindBeforeUnloadEvent(false, false, false);
-      Site.initTemplateLayout(
-        _templateDefLayout.NAV_FLOAT_ON_BANNER,
-        true,
-        false
-      );
+      // Site.initTemplateLayout(
+      //   _templateDefLayout.NAV_FLOAT_ON_BANNER,
+      //   true,
+      //   false
+      // );
 
       // ajax统计
       // Site.total({
