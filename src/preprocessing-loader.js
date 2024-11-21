@@ -15,13 +15,15 @@ module.exports = function(source){
 }
 
 function processHtml(source){
-    source = source.replace(/`/g,'\\`');
-    source = source.replace(/\$/g,'*$*');
-    source = source.replace(/@\{\{\s*(\S+?)\s*}\}/g,"${assets.$1}");
-    source = eval('(`'+source+'`)');
-    source = source.replace(/\*\$\*/g,'$');
-    return source;
+    return processCss(source);
+    // source = source.replace(/`/g,'\\`');
+    // source = source.replace(/\$/g,'*$*');
+    // source = source.replace(/@\{\{\s*(\S+?)\s*}\}/g,"${assets.$1}");
+    // source = eval('(`'+source+'`)');
+    // source = source.replace(/\*\$\*/g,'$');
+    // return source;
 }
 function processCss(source){
-    return processHtml(source);
+    source = source.replace(/@\{\{\s*?(\S+?)\s*?\}\}/g,(a,b)=>assets[b]);
+    return source
 }
